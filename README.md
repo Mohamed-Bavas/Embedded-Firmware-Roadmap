@@ -37,7 +37,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 | Day | Topic | Status |
 |-----|-------|:------:|
 | Day 01 | C Programming Basics | ✅ |
-| Day 02 | Pointers, Arrays & Strings | ⏳ |
+| Day 02 | Pointers, Arrays & Strings | ✅ |
 | Day 03 | Functions, Storage Classes & Memory | ⏳ |
 | Day 04 | Structures, Unions & Enums | ⏳ |
 | Day 05 | File Handling & Preprocessor | ⏳ |
@@ -61,7 +61,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 
 ## 📂 Repository Structure
 
-```text
+text
 Embedded-Firmware-Roadmap/
 │
 ├── README.md
@@ -91,7 +91,6 @@ Embedded-Firmware-Roadmap/
 ├── Mini_Projects/
 ├── Notes/
 └── Resources/
-```
 
 ---
 
@@ -122,7 +121,18 @@ Embedded-Firmware-Roadmap/
 
 - ✔️ Started my Embedded Firmware learning journey.
 - ✔️ Completed Day 01 – C Programming Basics.
-- 🔄 Continuing to learn and upload code regularly.
+- ✔️ Completed Day 02 – Pointers, Arrays & Strings.
+- 🔄 Next: Day 03 – Functions, Storage Classes & Memory.
+
+---
+
+## 🏆 Progress Tracker
+
+**Completed:** 2 / 20 Days (10%)
+
+```
+████░░░░░░░░░░░░░░░░ 10%
+```
 
 ---
 
