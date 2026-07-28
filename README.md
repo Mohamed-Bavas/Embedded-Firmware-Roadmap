@@ -61,7 +61,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 
 ## 📂 Repository Structure
 
-text
+```text
 Embedded-Firmware-Roadmap/
 │
 ├── README.md
@@ -91,6 +91,7 @@ Embedded-Firmware-Roadmap/
 ├── Mini_Projects/
 ├── Notes/
 └── Resources/
+```
 
 ---
 
