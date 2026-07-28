@@ -2,34 +2,37 @@
 
 Welcome to **Day 02** of my **Embedded Firmware Engineer Roadmap**.
 
-Today I learned one of the most important topics in C programming: **Pointers, Arrays, and Strings**. These concepts are the backbone of embedded systems programming because they enable efficient memory management, direct hardware access, and fast data processing.
+Today I explored **Pointers**, **Arrays**, and **Strings** in C. These are fundamental concepts in Embedded C programming and are widely used for memory access, peripheral control, data manipulation, and firmware development.
 
 ---
 
-## 🎯 Objective
+## 🎯 Goal
 
-- Understand memory addresses and pointers.
-- Learn pointer declaration and dereferencing.
-- Understand pointer arithmetic.
-- Learn one-dimensional and two-dimensional arrays.
-- Understand the relationship between arrays and pointers.
-- Learn string handling using character arrays.
-- Practice solving pointer, array, and string-based programming problems.
+- Understand the fundamentals of pointers in C.
+- Learn how memory addresses are accessed using pointers.
+- Use the Address (`&`) and Dereference (`*`) operators.
+- Implement Call by Reference using pointers.
+- Learn array declaration, traversal, and manipulation.
+- Perform basic string operations without using standard library functions.
+- Build a strong foundation for memory handling in Embedded C.
 
 ---
 
 ## 📚 Topics Covered
 
-- ✅ Memory Basics
-- ✅ Address (`&`) Operator
-- ✅ Dereference (`*`) Operator
-- ✅ Pointer Declaration & Initialization
-- ✅ Pointer Arithmetic
+- ✅ Introduction to Pointers
+- ✅ Pointer Declaration and Initialization
+- ✅ Address Operator (`&`)
+- ✅ Dereference Operator (`*`)
+- ✅ Call by Reference
 - ✅ Arrays
-- ✅ Arrays and Pointers
-- ✅ Two-Dimensional Arrays
-- ✅ Strings in C
-- ✅ String Functions (`strlen`, `strcpy`, `strcmp`, `strcat`)
+- ✅ Array Traversal
+- ✅ Array Sum
+- ✅ Array Reverse
+- ✅ String Basics
+- ✅ String Length
+- ✅ String Copy
+- ✅ String Compare
 
 ---
 
@@ -38,18 +41,15 @@ Today I learned one of the most important topics in C programming: **Pointers, A
 | No. | Program |
 |-----|---------|
 | 1 | pointer_basics.c |
-| 2 | pointer_arithmetic.c |
-| 3 | swap_using_pointer.c |
-| 4 | array_sum.c |
-| 5 | largest_array.c |
-| 6 | reverse_array.c |
-| 7 | string_length.c |
-| 8 | reverse_string.c |
+| 2 | address_operator.c |
+| 3 | dereference_operator.c |
+| 4 | swap_using_pointers.c |
+| 5 | array_basics.c |
+| 6 | array_sum.c |
+| 7 | array_reverse.c |
+| 8 | string_length.c |
 | 9 | string_copy.c |
 | 10 | string_compare.c |
-| 11 | count_vowels.c |
-| 12 | matrix_addition.c |
-| 13 | matrix_multiplication.c |
 
 ---
 
@@ -87,79 +87,63 @@ pointer_basics.exe
 ## 📖 Key Learnings
 
 - Understood how pointers store memory addresses.
-- Learned how to access values using dereferencing.
-- Practiced pointer arithmetic.
-- Worked with one-dimensional and two-dimensional arrays.
-- Learned the relationship between arrays and pointers.
-- Practiced string manipulation using character arrays.
-- Improved problem-solving through pointer and string programs.
+- Learned the difference between the Address (`&`) and Dereference (`*`) operators.
+- Implemented Call by Reference using pointers.
+- Worked with one-dimensional arrays.
+- Performed array traversal, summation, and reversal.
+- Implemented string operations manually without using standard library functions.
+- Improved understanding of memory access, which is essential for Embedded C programming.
 
 ---
 
-## 📁 Folder Structure
+## 📂 Folder Structure
 
 ```text
 Day02_Pointers/
 │── README.md
 │── pointer_basics.c
-│── pointer_arithmetic.c
-│── swap_using_pointer.c
+│── address_operator.c
+│── dereference_operator.c
+│── swap_using_pointers.c
+│── array_basics.c
 │── array_sum.c
-│── largest_array.c
-│── reverse_array.c
+│── array_reverse.c
 │── string_length.c
-│── reverse_string.c
 │── string_copy.c
-│── string_compare.c
-│── count_vowels.c
-│── matrix_addition.c
-└── matrix_multiplication.c
+└── string_compare.c
 ```
 
 ---
 
-## 🧠 Interview Questions
+## 🔧 Embedded Firmware Relevance
 
-1. What is a pointer in C?
-2. What is the difference between `*` and `&`?
-3. What is pointer arithmetic?
-4. What is a NULL pointer?
-5. What is a dangling pointer?
-6. What is the difference between an array and a pointer?
-7. What is the difference between `char *str` and `char str[]`?
-8. How are arrays stored in memory?
-9. Explain string handling in C.
-10. Why are pointers important in embedded systems?
+Pointers, arrays, and strings are essential in embedded firmware because they are used for:
 
----
+- Memory-mapped register access
+- Peripheral driver development
+- UART, SPI, I2C, and CAN communication
+- Sensor data buffering
+- Efficient memory management
+- Passing data between functions
+- Firmware optimisation
 
-## 🚀 Embedded Firmware Relevance
-
-Pointers, arrays, and strings are fundamental concepts in embedded firmware development.
-
-They are used to:
-
-- Access memory-mapped hardware registers.
-- Develop peripheral drivers.
-- Handle communication buffers (UART, SPI, I2C, CAN).
-- Process sensor and actuator data.
-- Optimize memory usage in resource-constrained microcontrollers.
-
----
-
-## 📈 Day 02 Progress
-
-- ✅ Learned memory concepts and pointers.
-- ✅ Practiced pointer arithmetic.
-- ✅ Implemented array operations.
-- ✅ Worked with strings and character arrays.
-- ✅ Completed Day 02 successfully.
+Mastering these concepts is an important step toward becoming an Embedded Firmware Engineer.
 
 ---
 
 ## 🎯 Next Goal
 
 ➡️ **Day 03 – Functions, Storage Classes & Memory**
+
+Upcoming topics:
+
+- Functions in C
+- Function Prototypes
+- Call by Value vs Call by Reference
+- Recursion
+- Storage Classes (`auto`, `static`, `extern`, `register`)
+- Stack and Heap Memory
+- Memory Layout of a C Program
 
 ---
 
@@ -171,4 +155,4 @@ Feel free to explore the programs, provide feedback, or suggest improvements.
 
 ⭐ If you find this repository helpful, consider giving it a star!
 
-#EmbeddedC #Pointers #Arrays #Strings #CProgramming #EmbeddedSystems #Firmware #GitHub #LearningJourney
+#EmbeddedC #Pointers #Arrays #Strings #MemoryManagement #Firmware #EmbeddedSystems #CProgramming #GitHub #LearningJourney
