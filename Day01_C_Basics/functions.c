@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int add(int a, int b)
 {
     return a + b;
@@ -15,6 +14,6 @@ int main()
     result = add(num1, num2);
 
     printf("Sum = %d\n", result);
-
+    
     return 0;
 }
