@@ -9,12 +9,12 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 ## 🎯 Goals
 
 - Learn C Programming from fundamentals to advanced concepts.
-- Understand Embedded C programming.
-- Master 8051 and STM32 microcontrollers.
+- Master core Embedded C concepts, including pointers, memory management, and storage classes.
+- Understand 8051 and STM32 microcontroller architecture and programming.
 - Learn communication protocols (UART, SPI, I2C, CAN).
-- Build embedded firmware projects.
-- Practice interview questions and coding challenges.
-- Maintain a consistent daily learning log on GitHub.
+- Develop embedded firmware projects using industry-standard tools.
+- Strengthen problem-solving and interview preparation skills.
+- Maintain a consistent daily learning log and portfolio on GitHub.
 
 ---
 
@@ -38,7 +38,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 |-----|-------|:------:|
 | Day 01 | C Programming Basics | ✅ |
 | Day 02 | Pointers, Arrays & Strings | ✅ |
-| Day 03 | Functions, Storage Classes & Memory | ⏳ |
+| Day 03 | Functions, Storage Classes & Memory | ✅ |
 | Day 04 | Structures, Unions & Enums | ⏳ |
 | Day 05 | File Handling & Preprocessor | ⏳ |
 | Day 06 | Bitwise Operators & Embedded C | ⏳ |
@@ -99,7 +99,8 @@ Embedded-Firmware-Roadmap/
 
 - Official C Programming Documentation
 - Embedded C Tutorials
-- STM32 Documentation
+- STM32 Reference Manuals
+- STM32 HAL Documentation
 - 8051 Datasheets
 - ARM Cortex-M Documentation
 
@@ -112,9 +113,9 @@ Embedded-Firmware-Roadmap/
 - ✅ 8051 Firmware Examples
 - ✅ STM32 Projects
 - ✅ Communication Protocol Examples
-- ✅ Interview Programs
-- ✅ Notes and Explanations
-- ✅ Mini Projects
+- ✅ Interview-Oriented Programs
+- ✅ Detailed Notes and Explanations
+- ✅ Practical Mini Projects
 
 ---
 
@@ -123,17 +124,70 @@ Embedded-Firmware-Roadmap/
 - ✔️ Started my Embedded Firmware learning journey.
 - ✔️ Completed Day 01 – C Programming Basics.
 - ✔️ Completed Day 02 – Pointers, Arrays & Strings.
-- 🔄 Next: Day 03 – Functions, Storage Classes & Memory.
+- ✔️ Completed Day 03 – Functions, Storage Classes & Memory.
+- 🔄 Next: Day 04 – Structures, Unions & Enums.
 
 ---
 
 ## 🏆 Progress Tracker
 
-**Completed:** 2 / 20 Days (10%)
+**Completed:** **3 / 20 Days (15%)**
 
+```text
+██████░░░░░░░░░░░░░░ 15%
 ```
-████░░░░░░░░░░░░░░░░ 10%
-```
+
+---
+
+## 📈 Skills Covered So Far
+
+### ✅ C Programming Fundamentals
+
+- Variables
+- Data Types
+- Operators
+- Input / Output
+- Conditional Statements
+- Loops
+
+### ✅ Functions
+
+- Function Declaration
+- Function Definition
+- Function Prototype
+- Function Arguments
+- Return Values
+- Recursion
+- Call by Value
+- Call by Reference
+
+### ✅ Pointers
+
+- Pointer Basics
+- Address Operator
+- Dereference Operator
+- Pointer Functions
+
+### ✅ Arrays
+
+- Array Declaration
+- Traversal
+- Sum
+- Reverse
+
+### ✅ Strings
+
+- String Length
+- String Copy
+- String Compare
+
+### ✅ Memory Concepts
+
+- Local Variables
+- Global Variables
+- Static Variables
+- Storage Classes
+- Memory Layout (Text, Data, BSS, Heap, Stack)
 
 ---
 
@@ -147,15 +201,18 @@ I enjoy learning, building embedded systems, and sharing my progress. If you hav
 
 If you find this repository helpful, consider giving it a **⭐ Star**.
 
-It motivates me to continue learning and sharing my work.
+It motivates me to continue learning and share my journey with the community.
 
 ---
 
-### 📈 Learning Philosophy
+## 📈 Learning Philosophy
 
-> "Consistency beats intensity."
+> **"Consistency beats intensity."**
 
-One day at a time, one program at a time, one project at a time.
+One day at a time.
+One concept at a time.
+One program at a time.
+One project at a time.
 
 ---
 
