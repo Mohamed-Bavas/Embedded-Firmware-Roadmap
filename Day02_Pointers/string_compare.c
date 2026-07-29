@@ -14,11 +14,9 @@ int main()
         }
         i++;
     }
-
     if(flag)
         printf("Strings are Equal\n");
     else
         printf("Strings are Not Equal\n");
-
     return 0;
 }
