@@ -8,13 +8,13 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 
 ## 🎯 Goals
 
-- Learn C Programming from fundamentals to advanced concepts.
-- Master core Embedded C concepts, including pointers, memory management, and storage classes.
+- Build a strong foundation in C and Embedded C programming.
+- Master pointers, memory management, and user-defined data types.
 - Understand 8051 and STM32 microcontroller architecture and programming.
-- Learn communication protocols (UART, SPI, I2C, CAN).
-- Develop embedded firmware projects using industry-standard tools.
-- Strengthen problem-solving and interview preparation skills.
-- Maintain a consistent daily learning log and portfolio on GitHub.
+- Learn embedded communication protocols (UART, SPI, I2C, CAN).
+- Develop practical embedded firmware projects.
+- Strengthen problem-solving and embedded interview skills.
+- Maintain a consistent learning portfolio on GitHub.
 
 ---
 
@@ -39,7 +39,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 | Day 01 | C Programming Basics | ✅ |
 | Day 02 | Pointers, Arrays & Strings | ✅ |
 | Day 03 | Functions, Storage Classes & Memory | ✅ |
-| Day 04 | Structures, Unions & Enums | ⏳ |
+| Day 04 | Structures, Unions & Enums | ✅ |
 | Day 05 | File Handling & Preprocessor | ⏳ |
 | Day 06 | Bitwise Operators & Embedded C | ⏳ |
 | Day 07 | 8051 Microcontroller Basics | ⏳ |
@@ -125,16 +125,17 @@ Embedded-Firmware-Roadmap/
 - ✔️ Completed Day 01 – C Programming Basics.
 - ✔️ Completed Day 02 – Pointers, Arrays & Strings.
 - ✔️ Completed Day 03 – Functions, Storage Classes & Memory.
-- 🔄 Next: Day 04 – Structures, Unions & Enums.
+- ✔️ Completed Day 04 – Structures, Unions & Enums.
+- 🔄 Next: **Day 05 – File Handling & Preprocessor**.
 
 ---
 
 ## 🏆 Progress Tracker
 
-**Completed:** **3 / 20 Days (15%)**
+**Completed:** **4 / 20 Days (20%)**
 
 ```text
-██████░░░░░░░░░░░░░░ 15%
+████████░░░░░░░░░░░░ 20%
 ```
 
 ---
@@ -146,9 +147,9 @@ Embedded-Firmware-Roadmap/
 - Variables
 - Data Types
 - Operators
-- Input / Output
-- Conditional Statements
-- Loops
+- Input / Output (`printf`, `scanf`)
+- Conditional Statements (`if-else`, `switch`)
+- Loops (`for`, `while`, `do-while`)
 
 ### ✅ Functions
 
@@ -164,16 +165,16 @@ Embedded-Firmware-Roadmap/
 ### ✅ Pointers
 
 - Pointer Basics
-- Address Operator
-- Dereference Operator
+- Address Operator (`&`)
+- Dereference Operator (`*`)
 - Pointer Functions
 
 ### ✅ Arrays
 
 - Array Declaration
-- Traversal
-- Sum
-- Reverse
+- Array Traversal
+- Array Sum
+- Array Reverse
 
 ### ✅ Strings
 
@@ -186,14 +187,53 @@ Embedded-Firmware-Roadmap/
 - Local Variables
 - Global Variables
 - Static Variables
-- Storage Classes
+- Storage Classes (`auto`, `register`, `static`, `extern`)
 - Memory Layout (Text, Data, BSS, Heap, Stack)
+
+### ✅ User-Defined Data Types
+
+- Structures (`struct`)
+- Structure Initialization
+- Array of Structures
+- Nested Structures
+- Pointer to Structure
+- Self-Referential Structures
+- Unions (`union`)
+- Structure vs Union
+- Enumerations (`enum`)
+- `typedef`
+- Bit Fields
+- Structure Padding
+- Memory Alignment
+
+---
+
+## 🚀 Upcoming Topics
+
+- 📂 File Handling
+- ⚙️ Preprocessor Directives
+- 🔢 Bitwise Operators
+- 💡 Embedded C Programming
+- 🔌 8051 Microcontroller
+- 💻 GPIO Programming
+- ⏱️ Timers
+- 🚨 Interrupts
+- 📡 UART Communication
+- 🔄 SPI Communication
+- 🔗 I2C Communication
+- 📈 ADC & DAC
+- 🎚️ PWM
+- 🚌 CAN Protocol
+- 🛡️ Watchdog Timer
+- 🚀 Bootloader Basics
+- ⚡ RTOS Basics
+- 🛠️ Mini Embedded Project
 
 ---
 
 ## 🤝 Connect With Me
 
-I enjoy learning, building embedded systems, and sharing my progress. If you have suggestions or feedback, feel free to open an issue or connect with me on GitHub.
+I enjoy learning, building embedded systems, and sharing my progress. If you have suggestions, feedback, or ideas for improvement, feel free to open an issue or connect with me on GitHub.
 
 ---
 
@@ -201,7 +241,7 @@ I enjoy learning, building embedded systems, and sharing my progress. If you hav
 
 If you find this repository helpful, consider giving it a **⭐ Star**.
 
-It motivates me to continue learning and share my journey with the community.
+Your support motivates me to continue learning, building projects, and sharing my progress with the community.
 
 ---
 
@@ -209,11 +249,12 @@ It motivates me to continue learning and share my journey with the community.
 
 > **"Consistency beats intensity."**
 
-One day at a time.
-One concept at a time.
-One program at a time.
+One day at a time.  
+One concept at a time.  
+One program at a time.  
 One project at a time.
 
 ---
 
 **Thank you for visiting my repository! Happy Coding! 🚀**
+```
