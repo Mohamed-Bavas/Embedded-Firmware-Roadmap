@@ -9,7 +9,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 ## 🎯 Goals
 
 - Build a strong foundation in C and Embedded C programming.
-- Master pointers, memory management, and user-defined data types.
+- Master pointers, memory management, user-defined data types, and modular programming.
 - Understand 8051 and STM32 microcontroller architecture and programming.
 - Learn embedded communication protocols (UART, SPI, I2C, CAN).
 - Develop practical embedded firmware projects.
@@ -40,7 +40,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 | Day 02 | Pointers, Arrays & Strings | ✅ |
 | Day 03 | Functions, Storage Classes & Memory | ✅ |
 | Day 04 | Structures, Unions & Enums | ✅ |
-| Day 05 | File Handling & Preprocessor | ⏳ |
+| Day 05 | File Handling & Preprocessor | ✅ |
 | Day 06 | Bitwise Operators & Embedded C | ⏳ |
 | Day 07 | 8051 Microcontroller Basics | ⏳ |
 | Day 08 | GPIO Programming | ⏳ |
@@ -126,16 +126,17 @@ Embedded-Firmware-Roadmap/
 - ✔️ Completed Day 02 – Pointers, Arrays & Strings.
 - ✔️ Completed Day 03 – Functions, Storage Classes & Memory.
 - ✔️ Completed Day 04 – Structures, Unions & Enums.
-- 🔄 Next: **Day 05 – File Handling & Preprocessor**.
+- ✔️ Completed Day 05 – File Handling & Preprocessor.
+- 🔄 Next: **Day 06 – Bitwise Operators & Embedded C**.
 
 ---
 
 ## 🏆 Progress Tracker
 
-**Completed:** **4 / 20 Days (20%)**
+**Completed:** **5 / 20 Days (25%)**
 
 ```text
-████████░░░░░░░░░░░░ 20%
+██████████░░░░░░░░░░ 25%
 ```
 
 ---
@@ -206,12 +207,31 @@ Embedded-Firmware-Roadmap/
 - Structure Padding
 - Memory Alignment
 
+### ✅ File Handling
+
+- File Pointer (`FILE *`)
+- File Opening Modes
+- `fopen()` / `fclose()`
+- `fprintf()` / `fscanf()`
+- `fputc()` / `fgetc()`
+- `fputs()` / `fgets()`
+- `fwrite()` / `fread()`
+
+### ✅ Preprocessor
+
+- `#include`
+- `#define`
+- Function-like Macros
+- Header Files
+- Conditional Compilation
+- Include Guards
+- `#undef`
+- `#pragma`
+
 ---
 
 ## 🚀 Upcoming Topics
 
-- 📂 File Handling
-- ⚙️ Preprocessor Directives
 - 🔢 Bitwise Operators
 - 💡 Embedded C Programming
 - 🔌 8051 Microcontroller
@@ -257,4 +277,3 @@ One project at a time.
 ---
 
 **Thank you for visiting my repository! Happy Coding! 🚀**
-```
