@@ -9,7 +9,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 ## 🎯 Goals
 
 - Build a strong foundation in C and Embedded C programming.
-- Master pointers, memory management, user-defined data types, and modular programming.
+- Master pointers, memory management, user-defined data types, modular programming, and bit manipulation.
 - Understand 8051 and STM32 microcontroller architecture and programming.
 - Learn embedded communication protocols (UART, SPI, I2C, CAN).
 - Develop practical embedded firmware projects.
@@ -41,7 +41,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 | Day 03 | Functions, Storage Classes & Memory | ✅ |
 | Day 04 | Structures, Unions & Enums | ✅ |
 | Day 05 | File Handling & Preprocessor | ✅ |
-| Day 06 | Bitwise Operators & Embedded C | ⏳ |
+| Day 06 | Bitwise Operators & Embedded C | ✅ |
 | Day 07 | 8051 Microcontroller Basics | ⏳ |
 | Day 08 | GPIO Programming | ⏳ |
 | Day 09 | Timers | ⏳ |
@@ -127,16 +127,17 @@ Embedded-Firmware-Roadmap/
 - ✔️ Completed Day 03 – Functions, Storage Classes & Memory.
 - ✔️ Completed Day 04 – Structures, Unions & Enums.
 - ✔️ Completed Day 05 – File Handling & Preprocessor.
-- 🔄 Next: **Day 06 – Bitwise Operators & Embedded C**.
+- ✔️ Completed Day 06 – Bitwise Operators & Embedded C.
+- 🔄 Next: **Day 07 – 8051 Microcontroller Basics**.
 
 ---
 
 ## 🏆 Progress Tracker
 
-**Completed:** **5 / 20 Days (25%)**
+**Completed:** **6 / 20 Days (30%)**
 
 ```text
-██████████░░░░░░░░░░ 25%
+████████████░░░░░░░░ 30%
 ```
 
 ---
@@ -228,13 +229,33 @@ Embedded-Firmware-Roadmap/
 - `#undef`
 - `#pragma`
 
+### ✅ Bitwise Operators
+
+- Binary & Hexadecimal Number Systems
+- Bitwise AND (`&`)
+- Bitwise OR (`|`)
+- Bitwise XOR (`^`)
+- Bitwise NOT (`~`)
+- Left Shift (`<<`)
+- Right Shift (`>>`)
+- Set, Clear, Toggle & Check Bits
+- Bit Masks
+
+### ✅ Embedded C Concepts
+
+- Introduction to Embedded C
+- Difference Between C & Embedded C
+- `volatile` Keyword
+- `const` Keyword
+- Register-Level Programming
+- Memory-Mapped I/O
+- Embedded Coding Best Practices
+
 ---
 
 ## 🚀 Upcoming Topics
 
-- 🔢 Bitwise Operators
-- 💡 Embedded C Programming
-- 🔌 8051 Microcontroller
+- 🔌 8051 Microcontroller Basics
 - 💻 GPIO Programming
 - ⏱️ Timers
 - 🚨 Interrupts
