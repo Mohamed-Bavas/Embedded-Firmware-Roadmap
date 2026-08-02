@@ -1,300 +1,260 @@
-# 🚀 Embedded Firmware Roadmap
+# 📘 Day 07 – 8051 Microcontroller Basics
 
-Welcome to my **Embedded Firmware Engineer Learning Journey**.
+Welcome to **Day 07** of my **Embedded Firmware Engineer Roadmap**.
 
-This repository documents my daily progress as I learn **Embedded C**, **Microcontrollers**, **Communication Protocols**, and **Firmware Development**. My goal is to build strong programming skills, create practical projects, and prepare for Embedded Firmware Engineer interviews.
-
----
-
-## 🎯 Goals
-
-- Build a strong foundation in C and Embedded C programming.
-- Master pointers, memory management, user-defined data types, modular programming, and bit manipulation.
-- Understand 8051 and STM32 microcontroller architecture and programming.
-- Learn embedded communication protocols (UART, SPI, I2C, CAN).
-- Develop practical embedded firmware projects.
-- Strengthen problem-solving and embedded interview skills.
-- Maintain a consistent learning portfolio on GitHub.
+Today I started learning the **8051 Microcontroller**, one of the most popular microcontrollers used to understand embedded systems. I explored its architecture, memory organization, pin configuration, Special Function Registers (SFRs), clock and reset circuits, and the basic development environment using **Keil μVision** and **Proteus**.
 
 ---
 
-## 🛠️ Technologies & Tools
+## 🎯 Goal
 
-- C Programming
-- Embedded C
-- 8051 Microcontroller
-- STM32
-- VS Code
-- STM32CubeIDE
-- Keil uVision
+- Understand the fundamentals of Embedded Systems.
+- Learn the basics of Microcontrollers.
+- Explore the architecture of the 8051 Microcontroller.
+- Understand the 8051 pin diagram and memory organization.
+- Learn about Special Function Registers (SFRs).
+- Understand clock, reset, and machine cycle concepts.
+- Set up the Keil μVision IDE and Proteus simulator.
+- Write and simulate the first Embedded C program.
+
+---
+
+## 📚 Topics Covered
+
+### ✅ Introduction to Embedded Systems
+
+- What is an Embedded System?
+- Characteristics
+- Hardware Components
+- Software Components
+- Real-world Applications
+
+### ✅ Introduction to Microcontrollers
+
+- What is a Microcontroller?
+- Features
+- Applications
+- Microcontroller vs Microprocessor
+
+### ✅ Introduction to 8051
+
+- History of 8051
+- Features
+- Applications
+- Family Members
+
+### ✅ 8051 Architecture
+
+- CPU
+- ALU
+- Accumulator
+- B Register
+- Program Counter
+- Stack Pointer
+- Data Pointer (DPTR)
+- Program Memory
+- Data Memory
+- Timers
+- Serial Port
+- Interrupt Controller
+- I/O Ports
+
+### ✅ 8051 Pin Diagram
+
+- Power Pins
+- Crystal Oscillator Pins
+- Reset Pin
+- Port 0
+- Port 1
+- Port 2
+- Port 3
+- EA
+- ALE
+- PSEN
+
+### ✅ Memory Organization
+
+- Program Memory
+- Internal RAM
+- External RAM
+- Register Banks
+- Bit Addressable Memory
+- Stack
+
+### ✅ Special Function Registers (SFRs)
+
+- ACC
+- B
+- PSW
+- SP
+- DPTR
+- TMOD
+- TCON
+- TH0
+- TL0
+- TH1
+- TL1
+- SCON
+- SBUF
+- IE
+- IP
+- P0
+- P1
+- P2
+- P3
+
+### ✅ Ports
+
+- Port 0
+- Port 1
+- Port 2
+- Port 3
+- Input and Output Operations
+- Internal and External Pull-up Resistors
+
+### ✅ Clock and Reset
+
+- Crystal Oscillator
+- Clock Frequency
+- Machine Cycle
+- Instruction Cycle
+- Reset Circuit
+
+### ✅ Development Tools
+
+- Keil μVision
 - Proteus
-- Git & GitHub
+- HEX File Generation
+- Circuit Simulation
 
 ---
 
-## 📅 Learning Roadmap
+## 💻 Practice Programs
 
-| Day | Topic | Status |
-|-----|-------|:------:|
-| Day 01 | C Programming Basics | ✅ |
-| Day 02 | Pointers, Arrays & Strings | ✅ |
-| Day 03 | Functions, Storage Classes & Memory | ✅ |
-| Day 04 | Structures, Unions & Enums | ✅ |
-| Day 05 | File Handling & Preprocessor | ✅ |
-| Day 06 | Bitwise Operators & Embedded C | ✅ |
-| Day 07 | 8051 Microcontroller Basics | ⏳ |
-| Day 08 | GPIO Programming | ⏳ |
-| Day 09 | Timers | ⏳ |
-| Day 10 | Interrupts | ⏳ |
-| Day 11 | UART | ⏳ |
-| Day 12 | SPI | ⏳ |
-| Day 13 | I2C | ⏳ |
-| Day 14 | ADC & DAC | ⏳ |
-| Day 15 | PWM | ⏳ |
-| Day 16 | CAN Protocol | ⏳ |
-| Day 17 | Watchdog Timer | ⏳ |
-| Day 18 | Bootloader Basics | ⏳ |
-| Day 19 | RTOS Basics | ⏳ |
-| Day 20 | Mini Embedded Project | ⏳ |
+| No. | Program |
+|-----|---------|
+| 1 | led_blink.c |
+| 2 | led_toggle.c |
+| 3 | alternate_led_blink.c |
+| 4 | port_output_demo.c |
+| 5 | port_input_demo.c |
+| 6 | switch_led_control.c |
+| 7 | traffic_light_simulation.c |
+| 8 | led_chaser.c |
+| 9 | delay_using_loop.c |
+| 10 | first_8051_program.c |
 
 ---
 
-## 📂 Repository Structure
+## 🛠️ Tools Used
+
+- Keil μVision
+- Proteus
+- AT89C51 Microcontroller
+- Embedded C
+- Git
+- GitHub
+
+---
+
+## ▶️ How to Compile
+
+1. Open **Keil μVision**
+2. Create a new 8051 project
+3. Add the C source file
+4. Build the project
+5. Generate the HEX file
+
+---
+
+## ▶️ How to Simulate
+
+1. Open Proteus
+2. Place the **AT89C51** microcontroller
+3. Add Crystal Oscillator (11.0592 MHz)
+4. Add Reset Circuit
+5. Connect LEDs and resistors
+6. Load the generated HEX file
+7. Run the simulation
+
+---
+
+## 📖 Key Learnings
+
+- Learned the fundamentals of Embedded Systems.
+- Understood the difference between a Microcontroller and a Microprocessor.
+- Explored the architecture of the 8051 Microcontroller.
+- Studied the function of each port and important pins.
+- Learned the internal memory organization of the 8051.
+- Understood the purpose of Special Function Registers (SFRs).
+- Learned how clock and reset circuits work.
+- Set up the Embedded C development environment using Keil and Proteus.
+- Wrote and simulated the first Embedded C program.
+- Built a strong foundation for GPIO programming and peripheral interfacing.
+
+---
+
+## 📂 Folder Structure
 
 ```text
-Embedded-Firmware-Roadmap/
-│
-├── README.md
-│
-├── Day01_C_Basics/
-├── Day02_Pointers/
-├── Day03_Functions_Memory/
-├── Day04_Structures_Unions/
-├── Day05_File_Handling/
-├── Day06_Embedded_C/
-├── Day07_8051_Basics/
-├── Day08_GPIO/
-├── Day09_Timers/
-├── Day10_Interrupts/
-├── Day11_UART/
-├── Day12_SPI/
-├── Day13_I2C/
-├── Day14_ADC_DAC/
-├── Day15_PWM/
-├── Day16_CAN/
-├── Day17_Watchdog/
-├── Day18_Bootloader/
-├── Day19_RTOS/
-├── Day20_Mini_Project/
-│
-├── Interview_Programs/
-├── Mini_Projects/
-├── Notes/
-└── Resources/
+Day07_8051_Basics/
+│── README.md
+│── led_blink.c
+│── led_toggle.c
+│── alternate_led_blink.c
+│── port_output_demo.c
+│── port_input_demo.c
+│── switch_led_control.c
+│── traffic_light_simulation.c
+│── led_chaser.c
+│── delay_using_loop.c
+└── first_8051_program.c
 ```
 
 ---
 
-## 📚 Learning Resources
+## 🔧 Embedded Firmware Relevance
 
-- Official C Programming Documentation
-- Embedded C Tutorials
-- STM32 Reference Manuals
-- STM32 HAL Documentation
-- 8051 Datasheets
-- ARM Cortex-M Documentation
+The **8051 Microcontroller** is widely used to learn Embedded Systems because it introduces the core concepts of firmware development, including:
 
----
-
-## 💻 What You'll Find
-
-- ✅ C Programming Examples
-- ✅ Embedded C Programs
-- ✅ 8051 Firmware Examples
-- ✅ STM32 Projects
-- ✅ Communication Protocol Examples
-- ✅ Interview-Oriented Programs
-- ✅ Detailed Notes and Explanations
-- ✅ Practical Mini Projects
-
----
-
-## 🎯 Current Progress
-
-- ✔️ Started my Embedded Firmware learning journey.
-- ✔️ Completed Day 01 – C Programming Basics.
-- ✔️ Completed Day 02 – Pointers, Arrays & Strings.
-- ✔️ Completed Day 03 – Functions, Storage Classes & Memory.
-- ✔️ Completed Day 04 – Structures, Unions & Enums.
-- ✔️ Completed Day 05 – File Handling & Preprocessor.
-- ✔️ Completed Day 06 – Bitwise Operators & Embedded C.
-- 🔄 Next: **Day 07 – 8051 Microcontroller Basics**.
-
----
-
-## 🏆 Progress Tracker
-
-**Completed:** **6 / 20 Days (30%)**
-
-```text
-████████████░░░░░░░░ 30%
-```
-
----
-
-## 📈 Skills Covered So Far
-
-### ✅ C Programming Fundamentals
-
-- Variables
-- Data Types
-- Operators
-- Input / Output (`printf`, `scanf`)
-- Conditional Statements (`if-else`, `switch`)
-- Loops (`for`, `while`, `do-while`)
-
-### ✅ Functions
-
-- Function Declaration
-- Function Definition
-- Function Prototype
-- Function Arguments
-- Return Values
-- Recursion
-- Call by Value
-- Call by Reference
-
-### ✅ Pointers
-
-- Pointer Basics
-- Address Operator (`&`)
-- Dereference Operator (`*`)
-- Pointer Functions
-
-### ✅ Arrays
-
-- Array Declaration
-- Array Traversal
-- Array Sum
-- Array Reverse
-
-### ✅ Strings
-
-- String Length
-- String Copy
-- String Compare
-
-### ✅ Memory Concepts
-
-- Local Variables
-- Global Variables
-- Static Variables
-- Storage Classes (`auto`, `register`, `static`, `extern`)
-- Memory Layout (Text, Data, BSS, Heap, Stack)
-
-### ✅ User-Defined Data Types
-
-- Structures (`struct`)
-- Structure Initialization
-- Array of Structures
-- Nested Structures
-- Pointer to Structure
-- Self-Referential Structures
-- Unions (`union`)
-- Structure vs Union
-- Enumerations (`enum`)
-- `typedef`
-- Bit Fields
-- Structure Padding
-- Memory Alignment
-
-### ✅ File Handling
-
-- File Pointer (`FILE *`)
-- File Opening Modes
-- `fopen()` / `fclose()`
-- `fprintf()` / `fscanf()`
-- `fputc()` / `fgetc()`
-- `fputs()` / `fgets()`
-- `fwrite()` / `fread()`
-
-### ✅ Preprocessor
-
-- `#include`
-- `#define`
-- Function-like Macros
-- Header Files
-- Conditional Compilation
-- Include Guards
-- `#undef`
-- `#pragma`
-
-### ✅ Bitwise Operators
-
-- Binary & Hexadecimal Number Systems
-- Bitwise AND (`&`)
-- Bitwise OR (`|`)
-- Bitwise XOR (`^`)
-- Bitwise NOT (`~`)
-- Left Shift (`<<`)
-- Right Shift (`>>`)
-- Set, Clear, Toggle & Check Bits
-- Bit Masks
-
-### ✅ Embedded C Concepts
-
-- Introduction to Embedded C
-- Difference Between C & Embedded C
-- `volatile` Keyword
-- `const` Keyword
+- GPIO Programming
 - Register-Level Programming
-- Memory-Mapped I/O
-- Embedded Coding Best Practices
+- Memory Organization
+- Timers and Counters
+- UART Communication
+- Interrupt Handling
+- Hardware Interfacing
+- Embedded C Programming
+
+These concepts are directly applicable to modern microcontrollers such as **STM32**, **AVR**, **PIC**, and **ESP32**.
 
 ---
 
-## 🚀 Upcoming Topics
+## 🎯 Next Goal
 
-- 🔌 8051 Microcontroller Basics
-- 💻 GPIO Programming
-- ⏱️ Timers
-- 🚨 Interrupts
-- 📡 UART Communication
-- 🔄 SPI Communication
-- 🔗 I2C Communication
-- 📈 ADC & DAC
-- 🎚️ PWM
-- 🚌 CAN Protocol
-- 🛡️ Watchdog Timer
-- 🚀 Bootloader Basics
-- ⚡ RTOS Basics
-- 🛠️ Mini Embedded Project
+➡️ **Day 08 – GPIO Programming**
 
----
+Upcoming topics:
 
-## 🤝 Connect With Me
-
-I enjoy learning, building embedded systems, and sharing my progress. If you have suggestions, feedback, or ideas for improvement, feel free to open an issue or connect with me on GitHub.
+- GPIO Fundamentals
+- LED Interfacing
+- Switch Interfacing
+- LED Blink Program
+- Port Input and Output
+- Traffic Light Controller
+- LED Chaser
+- Seven Segment Display Basics
+- Buzzer and Relay Interfacing
+- Practical Proteus Simulations
 
 ---
 
-## ⭐ Support
+## 🚀 Learning Journey
 
-If you find this repository helpful, consider giving it a **⭐ Star**.
+I am documenting my daily progress as I work toward becoming an **Embedded Firmware Engineer**.
 
-Your support motivates me to continue learning, building projects, and sharing my progress with the community.
+Feel free to explore the programs, provide feedback, or suggest improvements.
 
----
+⭐ If you find this repository helpful, consider giving it a star!
 
-## 📈 Learning Philosophy
-
-> **"Consistency beats intensity."**
-
-One day at a time.  
-One concept at a time.  
-One program at a time.  
-One project at a time.
-
----
-
-**Thank you for visiting my repository! Happy Coding! 🚀**
+#EmbeddedSystems #EmbeddedC #8051 #Microcontroller #Firmware #FirmwareEngineer #Keil #Proteus #Electronics #LearningJourney #GitHub
