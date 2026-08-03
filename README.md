@@ -6,19 +6,19 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 
 ---
 
-## 🎯 Goals
+# 🎯 Goals
 
 - Build a strong foundation in C and Embedded C programming.
-- Master pointers, memory management, user-defined data types, modular programming, and bit manipulation.
-- Understand 8051 and STM32 microcontroller architecture and programming.
+- Master memory management, bit manipulation, and register-level programming.
+- Understand 8051 and STM32 microcontroller architecture and peripherals.
 - Learn embedded communication protocols (UART, SPI, I2C, CAN).
-- Develop practical embedded firmware projects.
+- Develop practical embedded firmware projects using Embedded C.
 - Strengthen problem-solving and embedded interview skills.
 - Maintain a consistent learning portfolio on GitHub.
 
 ---
 
-## 🛠️ Technologies & Tools
+# 🛠️ Technologies & Tools
 
 - C Programming
 - Embedded C
@@ -26,13 +26,13 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 - STM32
 - VS Code
 - STM32CubeIDE
-- Keil uVision
+- Keil μVision
 - Proteus
 - Git & GitHub
 
 ---
 
-## 📅 Learning Roadmap
+# 📅 Learning Roadmap
 
 | Day | Topic | Status |
 |-----|-------|:------:|
@@ -42,7 +42,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 | Day 04 | Structures, Unions & Enums | ✅ |
 | Day 05 | File Handling & Preprocessor | ✅ |
 | Day 06 | Bitwise Operators & Embedded C | ✅ |
-| Day 07 | 8051 Microcontroller Basics | ⏳ |
+| Day 07 | 8051 Microcontroller Basics | ✅ |
 | Day 08 | GPIO Programming | ⏳ |
 | Day 09 | Timers | ⏳ |
 | Day 10 | Interrupts | ⏳ |
@@ -59,7 +59,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 
 ---
 
-## 📂 Repository Structure
+# 📂 Repository Structure
 
 ```text
 Embedded-Firmware-Roadmap/
@@ -95,18 +95,18 @@ Embedded-Firmware-Roadmap/
 
 ---
 
-## 📚 Learning Resources
+# 📚 Learning Resources
 
 - Official C Programming Documentation
 - Embedded C Tutorials
+- 8051 Datasheets
 - STM32 Reference Manuals
 - STM32 HAL Documentation
-- 8051 Datasheets
 - ARM Cortex-M Documentation
 
 ---
 
-## 💻 What You'll Find
+# 💻 What You'll Find
 
 - ✅ C Programming Examples
 - ✅ Embedded C Programs
@@ -119,7 +119,7 @@ Embedded-Firmware-Roadmap/
 
 ---
 
-## 🎯 Current Progress
+# 🎯 Current Progress
 
 - ✔️ Started my Embedded Firmware learning journey.
 - ✔️ Completed Day 01 – C Programming Basics.
@@ -128,71 +128,94 @@ Embedded-Firmware-Roadmap/
 - ✔️ Completed Day 04 – Structures, Unions & Enums.
 - ✔️ Completed Day 05 – File Handling & Preprocessor.
 - ✔️ Completed Day 06 – Bitwise Operators & Embedded C.
-- 🔄 Next: **Day 07 – 8051 Microcontroller Basics**.
+- ✔️ Completed Day 07 – 8051 Microcontroller Basics.
+- 🔄 Next: **Day 08 – GPIO Programming**.
 
 ---
 
-## 🏆 Progress Tracker
+# 🏆 Progress Tracker
 
-**Completed:** **6 / 20 Days (30%)**
+**Completed:** **7 / 20 Days (35%)**
 
 ```text
-████████████░░░░░░░░ 30%
+██████████████░░░░░░ 35%
 ```
 
 ---
 
-## 📈 Skills Covered So Far
+# 📈 Skills Covered So Far
 
-### ✅ C Programming Fundamentals
+## ✅ C Programming Fundamentals
 
 - Variables
 - Data Types
 - Operators
 - Input / Output (`printf`, `scanf`)
-- Conditional Statements (`if-else`, `switch`)
+- Conditional Statements (`if`, `if-else`, `switch`)
 - Loops (`for`, `while`, `do-while`)
 
-### ✅ Functions
+---
+
+## ✅ Functions
 
 - Function Declaration
 - Function Definition
 - Function Prototype
 - Function Arguments
 - Return Values
-- Recursion
 - Call by Value
 - Call by Reference
+- Recursion
 
-### ✅ Pointers
+---
+
+## ✅ Pointers
 
 - Pointer Basics
 - Address Operator (`&`)
 - Dereference Operator (`*`)
-- Pointer Functions
+- Pointer Arithmetic Basics
+- Passing Pointers to Functions
 
-### ✅ Arrays
+---
 
-- Array Declaration
+## ✅ Arrays
+
+- One-Dimensional Arrays
 - Array Traversal
-- Array Sum
-- Array Reverse
+- Sum of Array Elements
+- Reverse an Array
 
-### ✅ Strings
+---
+
+## ✅ Strings
 
 - String Length
 - String Copy
 - String Compare
 
-### ✅ Memory Concepts
+---
+
+## ✅ Memory Concepts
 
 - Local Variables
 - Global Variables
 - Static Variables
-- Storage Classes (`auto`, `register`, `static`, `extern`)
-- Memory Layout (Text, Data, BSS, Heap, Stack)
+- Storage Classes
+  - `auto`
+  - `register`
+  - `static`
+  - `extern`
+- Memory Layout
+  - Text Segment
+  - Data Segment
+  - BSS Segment
+  - Heap
+  - Stack
 
-### ✅ User-Defined Data Types
+---
+
+## ✅ User-Defined Data Types
 
 - Structures (`struct`)
 - Structure Initialization
@@ -208,7 +231,9 @@ Embedded-Firmware-Roadmap/
 - Structure Padding
 - Memory Alignment
 
-### ✅ File Handling
+---
+
+## ✅ File Handling
 
 - File Pointer (`FILE *`)
 - File Opening Modes
@@ -218,7 +243,9 @@ Embedded-Firmware-Roadmap/
 - `fputs()` / `fgets()`
 - `fwrite()` / `fread()`
 
-### ✅ Preprocessor
+---
+
+## ✅ C Preprocessor
 
 - `#include`
 - `#define`
@@ -229,19 +256,27 @@ Embedded-Firmware-Roadmap/
 - `#undef`
 - `#pragma`
 
-### ✅ Bitwise Operators
+---
 
-- Binary & Hexadecimal Number Systems
+## ✅ Bitwise Operators
+
+- Binary Number System
+- Hexadecimal Number System
 - Bitwise AND (`&`)
 - Bitwise OR (`|`)
 - Bitwise XOR (`^`)
 - Bitwise NOT (`~`)
 - Left Shift (`<<`)
 - Right Shift (`>>`)
-- Set, Clear, Toggle & Check Bits
+- Set Bit
+- Clear Bit
+- Toggle Bit
+- Check Bit
 - Bit Masks
 
-### ✅ Embedded C Concepts
+---
+
+## ✅ Embedded C Concepts
 
 - Introduction to Embedded C
 - Difference Between C & Embedded C
@@ -253,10 +288,73 @@ Embedded-Firmware-Roadmap/
 
 ---
 
-## 🚀 Upcoming Topics
+## ✅ Embedded Systems
 
-- 🔌 8051 Microcontroller Basics
-- 💻 GPIO Programming
+- Introduction to Embedded Systems
+- Characteristics
+- Hardware Components
+- Software Components
+- Applications of Embedded Systems
+
+---
+
+## ✅ Microcontrollers
+
+- Introduction to Microcontrollers
+- Microcontroller vs Microprocessor
+- Features
+- Applications
+- Block Diagram
+
+---
+
+## ✅ 8051 Microcontroller
+
+- History
+- Features
+- Architecture
+- Pin Diagram
+- Memory Organization
+- Register Banks
+- Internal RAM
+- Program Memory
+- Special Function Registers (SFRs)
+- Clock Circuit
+- Reset Circuit
+- Machine Cycle
+- Instruction Cycle
+
+---
+
+## ✅ 8051 Ports
+
+- Port 0
+- Port 1
+- Port 2
+- Port 3
+- Alternate Functions
+- Internal & External Pull-up Resistors
+
+---
+
+## ✅ Development Environment
+
+- Keil μVision IDE
+- Proteus Professional
+- Project Creation
+- Compilation
+- HEX File Generation
+- Proteus Simulation
+
+---
+
+# 🚀 Upcoming Topics
+
+- 💡 GPIO Programming
+- 💻 LED Interfacing
+- 🔘 Switch Interfacing
+- 🚦 Traffic Light Controller
+- 🔢 Seven Segment Display
 - ⏱️ Timers
 - 🚨 Interrupts
 - 📡 UART Communication
@@ -272,13 +370,13 @@ Embedded-Firmware-Roadmap/
 
 ---
 
-## 🤝 Connect With Me
+# 🤝 Connect With Me
 
 I enjoy learning, building embedded systems, and sharing my progress. If you have suggestions, feedback, or ideas for improvement, feel free to open an issue or connect with me on GitHub.
 
 ---
 
-## ⭐ Support
+# ⭐ Support
 
 If you find this repository helpful, consider giving it a **⭐ Star**.
 
@@ -286,7 +384,7 @@ Your support motivates me to continue learning, building projects, and sharing m
 
 ---
 
-## 📈 Learning Philosophy
+# 📈 Learning Philosophy
 
 > **"Consistency beats intensity."**
 
