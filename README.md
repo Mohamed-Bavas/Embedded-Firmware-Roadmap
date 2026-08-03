@@ -8,54 +8,54 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 
 # 🎯 Goals
 
-- Build a strong foundation in C and Embedded C programming.
-- Master memory management, bit manipulation, and register-level programming.
-- Understand 8051 and STM32 microcontroller architecture and peripherals.
-- Learn embedded communication protocols (UART, SPI, I2C, CAN).
-- Develop practical embedded firmware projects using Embedded C.
-- Strengthen problem-solving and embedded interview skills.
-- Maintain a consistent learning portfolio on GitHub.
+* Build a strong foundation in C and Embedded C programming.
+* Master memory management, bit manipulation, register-level programming, and GPIO programming.
+* Understand 8051 and STM32 microcontroller architecture and peripherals.
+* Learn embedded communication protocols (UART, SPI, I2C, CAN).
+* Develop practical embedded firmware projects using Embedded C.
+* Strengthen problem-solving and embedded interview skills.
+* Maintain a consistent learning portfolio on GitHub.
 
 ---
 
 # 🛠️ Technologies & Tools
 
-- C Programming
-- Embedded C
-- 8051 Microcontroller
-- STM32
-- VS Code
-- STM32CubeIDE
-- Keil μVision
-- Proteus
-- Git & GitHub
+* C Programming
+* Embedded C
+* 8051 Microcontroller
+* STM32
+* VS Code
+* STM32CubeIDE
+* Keil μVision
+* Proteus
+* Git & GitHub
 
 ---
 
 # 📅 Learning Roadmap
 
-| Day | Topic | Status |
-|-----|-------|:------:|
-| Day 01 | C Programming Basics | ✅ |
-| Day 02 | Pointers, Arrays & Strings | ✅ |
-| Day 03 | Functions, Storage Classes & Memory | ✅ |
-| Day 04 | Structures, Unions & Enums | ✅ |
-| Day 05 | File Handling & Preprocessor | ✅ |
-| Day 06 | Bitwise Operators & Embedded C | ✅ |
-| Day 07 | 8051 Microcontroller Basics | ✅ |
-| Day 08 | GPIO Programming | ⏳ |
-| Day 09 | Timers | ⏳ |
-| Day 10 | Interrupts | ⏳ |
-| Day 11 | UART | ⏳ |
-| Day 12 | SPI | ⏳ |
-| Day 13 | I2C | ⏳ |
-| Day 14 | ADC & DAC | ⏳ |
-| Day 15 | PWM | ⏳ |
-| Day 16 | CAN Protocol | ⏳ |
-| Day 17 | Watchdog Timer | ⏳ |
-| Day 18 | Bootloader Basics | ⏳ |
-| Day 19 | RTOS Basics | ⏳ |
-| Day 20 | Mini Embedded Project | ⏳ |
+| Day    | Topic                               | Status |
+| ------ | ----------------------------------- | :----: |
+| Day 01 | C Programming Basics                |    ✅   |
+| Day 02 | Pointers, Arrays & Strings          |    ✅   |
+| Day 03 | Functions, Storage Classes & Memory |    ✅   |
+| Day 04 | Structures, Unions & Enums          |    ✅   |
+| Day 05 | File Handling & Preprocessor        |    ✅   |
+| Day 06 | Bitwise Operators & Embedded C      |    ✅   |
+| Day 07 | 8051 Microcontroller Basics         |    ✅   |
+| Day 08 | GPIO Programming                    |    ✅   |
+| Day 09 | Timers                              |    ⏳   |
+| Day 10 | Interrupts                          |    ⏳   |
+| Day 11 | UART                                |    ⏳   |
+| Day 12 | SPI                                 |    ⏳   |
+| Day 13 | I2C                                 |    ⏳   |
+| Day 14 | ADC & DAC                           |    ⏳   |
+| Day 15 | PWM                                 |    ⏳   |
+| Day 16 | CAN Protocol                        |    ⏳   |
+| Day 17 | Watchdog Timer                      |    ⏳   |
+| Day 18 | Bootloader Basics                   |    ⏳   |
+| Day 19 | RTOS Basics                         |    ⏳   |
+| Day 20 | Mini Embedded Project               |    ⏳   |
 
 ---
 
@@ -97,48 +97,49 @@ Embedded-Firmware-Roadmap/
 
 # 📚 Learning Resources
 
-- Official C Programming Documentation
-- Embedded C Tutorials
-- 8051 Datasheets
-- STM32 Reference Manuals
-- STM32 HAL Documentation
-- ARM Cortex-M Documentation
+* Official C Programming Documentation
+* Embedded C Tutorials
+* 8051 Datasheets
+* STM32 Reference Manuals
+* STM32 HAL Documentation
+* ARM Cortex-M Documentation
 
 ---
 
 # 💻 What You'll Find
 
-- ✅ C Programming Examples
-- ✅ Embedded C Programs
-- ✅ 8051 Firmware Examples
-- ✅ STM32 Projects
-- ✅ Communication Protocol Examples
-- ✅ Interview-Oriented Programs
-- ✅ Detailed Notes and Explanations
-- ✅ Practical Mini Projects
+* ✅ C Programming Examples
+* ✅ Embedded C Programs
+* ✅ 8051 Firmware Examples
+* ✅ STM32 Projects
+* ✅ Communication Protocol Examples
+* ✅ Interview-Oriented Programs
+* ✅ Detailed Notes and Explanations
+* ✅ Practical Mini Projects
 
 ---
 
 # 🎯 Current Progress
 
-- ✔️ Started my Embedded Firmware learning journey.
-- ✔️ Completed Day 01 – C Programming Basics.
-- ✔️ Completed Day 02 – Pointers, Arrays & Strings.
-- ✔️ Completed Day 03 – Functions, Storage Classes & Memory.
-- ✔️ Completed Day 04 – Structures, Unions & Enums.
-- ✔️ Completed Day 05 – File Handling & Preprocessor.
-- ✔️ Completed Day 06 – Bitwise Operators & Embedded C.
-- ✔️ Completed Day 07 – 8051 Microcontroller Basics.
-- 🔄 Next: **Day 08 – GPIO Programming**.
+* ✔️ Started my Embedded Firmware learning journey.
+* ✔️ Completed Day 01 – C Programming Basics.
+* ✔️ Completed Day 02 – Pointers, Arrays & Strings.
+* ✔️ Completed Day 03 – Functions, Storage Classes & Memory.
+* ✔️ Completed Day 04 – Structures, Unions & Enums.
+* ✔️ Completed Day 05 – File Handling & Preprocessor.
+* ✔️ Completed Day 06 – Bitwise Operators & Embedded C.
+* ✔️ Completed Day 07 – 8051 Microcontroller Basics.
+* ✔️ Completed Day 08 – GPIO Programming.
+* 🔄 Next: **Day 09 – Timers**.
 
 ---
 
 # 🏆 Progress Tracker
 
-**Completed:** **7 / 20 Days (35%)**
+**Completed:** **8 / 20 Days (40%)**
 
 ```text
-██████████████░░░░░░ 35%
+████████████████░░░░ 40%
 ```
 
 ---
@@ -147,226 +148,267 @@ Embedded-Firmware-Roadmap/
 
 ## ✅ C Programming Fundamentals
 
-- Variables
-- Data Types
-- Operators
-- Input / Output (`printf`, `scanf`)
-- Conditional Statements (`if`, `if-else`, `switch`)
-- Loops (`for`, `while`, `do-while`)
+* Variables
+* Data Types
+* Operators
+* Input / Output (`printf`, `scanf`)
+* Conditional Statements (`if`, `if-else`, `switch`)
+* Loops (`for`, `while`, `do-while`)
 
 ---
 
 ## ✅ Functions
 
-- Function Declaration
-- Function Definition
-- Function Prototype
-- Function Arguments
-- Return Values
-- Call by Value
-- Call by Reference
-- Recursion
+* Function Declaration
+* Function Definition
+* Function Prototype
+* Function Arguments
+* Return Values
+* Call by Value
+* Call by Reference
+* Recursion
 
 ---
 
 ## ✅ Pointers
 
-- Pointer Basics
-- Address Operator (`&`)
-- Dereference Operator (`*`)
-- Pointer Arithmetic Basics
-- Passing Pointers to Functions
+* Pointer Basics
+* Address Operator (`&`)
+* Dereference Operator (`*`)
+* Pointer Arithmetic Basics
+* Passing Pointers to Functions
 
 ---
 
 ## ✅ Arrays
 
-- One-Dimensional Arrays
-- Array Traversal
-- Sum of Array Elements
-- Reverse an Array
+* One-Dimensional Arrays
+* Array Traversal
+* Sum of Array Elements
+* Reverse an Array
 
 ---
 
 ## ✅ Strings
 
-- String Length
-- String Copy
-- String Compare
+* String Length
+* String Copy
+* String Compare
 
 ---
 
 ## ✅ Memory Concepts
 
-- Local Variables
-- Global Variables
-- Static Variables
-- Storage Classes
-  - `auto`
-  - `register`
-  - `static`
-  - `extern`
-- Memory Layout
-  - Text Segment
-  - Data Segment
-  - BSS Segment
-  - Heap
-  - Stack
+* Local Variables
+* Global Variables
+* Static Variables
+* Storage Classes
+
+  * `auto`
+  * `register`
+  * `static`
+  * `extern`
+* Memory Layout
+
+  * Text Segment
+  * Data Segment
+  * BSS Segment
+  * Heap
+  * Stack
 
 ---
 
 ## ✅ User-Defined Data Types
 
-- Structures (`struct`)
-- Structure Initialization
-- Array of Structures
-- Nested Structures
-- Pointer to Structure
-- Self-Referential Structures
-- Unions (`union`)
-- Structure vs Union
-- Enumerations (`enum`)
-- `typedef`
-- Bit Fields
-- Structure Padding
-- Memory Alignment
+* Structures (`struct`)
+* Structure Initialization
+* Array of Structures
+* Nested Structures
+* Pointer to Structure
+* Self-Referential Structures
+* Unions (`union`)
+* Structure vs Union
+* Enumerations (`enum`)
+* `typedef`
+* Bit Fields
+* Structure Padding
+* Memory Alignment
 
 ---
 
 ## ✅ File Handling
 
-- File Pointer (`FILE *`)
-- File Opening Modes
-- `fopen()` / `fclose()`
-- `fprintf()` / `fscanf()`
-- `fputc()` / `fgetc()`
-- `fputs()` / `fgets()`
-- `fwrite()` / `fread()`
+* File Pointer (`FILE *`)
+* File Opening Modes
+* `fopen()` / `fclose()`
+* `fprintf()` / `fscanf()`
+* `fputc()` / `fgetc()`
+* `fputs()` / `fgets()`
+* `fwrite()` / `fread()`
 
 ---
 
 ## ✅ C Preprocessor
 
-- `#include`
-- `#define`
-- Function-like Macros
-- Header Files
-- Conditional Compilation
-- Include Guards
-- `#undef`
-- `#pragma`
+* `#include`
+* `#define`
+* Function-like Macros
+* Header Files
+* Conditional Compilation
+* Include Guards
+* `#undef`
+* `#pragma`
 
 ---
 
 ## ✅ Bitwise Operators
 
-- Binary Number System
-- Hexadecimal Number System
-- Bitwise AND (`&`)
-- Bitwise OR (`|`)
-- Bitwise XOR (`^`)
-- Bitwise NOT (`~`)
-- Left Shift (`<<`)
-- Right Shift (`>>`)
-- Set Bit
-- Clear Bit
-- Toggle Bit
-- Check Bit
-- Bit Masks
+* Binary Number System
+* Hexadecimal Number System
+* Bitwise AND (`&`)
+* Bitwise OR (`|`)
+* Bitwise XOR (`^`)
+* Bitwise NOT (`~`)
+* Left Shift (`<<`)
+* Right Shift (`>>`)
+* Set Bit
+* Clear Bit
+* Toggle Bit
+* Check Bit
+* Bit Masks
 
 ---
 
 ## ✅ Embedded C Concepts
 
-- Introduction to Embedded C
-- Difference Between C & Embedded C
-- `volatile` Keyword
-- `const` Keyword
-- Register-Level Programming
-- Memory-Mapped I/O
-- Embedded Coding Best Practices
+* Introduction to Embedded C
+* Difference Between C & Embedded C
+* `volatile` Keyword
+* `const` Keyword
+* Register-Level Programming
+* Memory-Mapped I/O
+* Embedded Coding Best Practices
 
 ---
 
 ## ✅ Embedded Systems
 
-- Introduction to Embedded Systems
-- Characteristics
-- Hardware Components
-- Software Components
-- Applications of Embedded Systems
+* Introduction to Embedded Systems
+* Characteristics
+* Hardware Components
+* Software Components
+* Applications of Embedded Systems
 
 ---
 
 ## ✅ Microcontrollers
 
-- Introduction to Microcontrollers
-- Microcontroller vs Microprocessor
-- Features
-- Applications
-- Block Diagram
+* Introduction to Microcontrollers
+* Microcontroller vs Microprocessor
+* Features
+* Applications
+* Block Diagram
 
 ---
 
 ## ✅ 8051 Microcontroller
 
-- History
-- Features
-- Architecture
-- Pin Diagram
-- Memory Organization
-- Register Banks
-- Internal RAM
-- Program Memory
-- Special Function Registers (SFRs)
-- Clock Circuit
-- Reset Circuit
-- Machine Cycle
-- Instruction Cycle
+* History
+* Features
+* Architecture
+* Pin Diagram
+* Memory Organization
+* Register Banks
+* Internal RAM
+* Program Memory
+* Special Function Registers (SFRs)
+* Clock Circuit
+* Reset Circuit
+* Machine Cycle
+* Instruction Cycle
 
 ---
 
 ## ✅ 8051 Ports
 
-- Port 0
-- Port 1
-- Port 2
-- Port 3
-- Alternate Functions
-- Internal & External Pull-up Resistors
+* Port 0
+* Port 1
+* Port 2
+* Port 3
+* Alternate Functions
+* Internal Pull-up Resistors
+* External Pull-up Resistor for Port 0
 
 ---
 
 ## ✅ Development Environment
 
-- Keil μVision IDE
-- Proteus Professional
-- Project Creation
-- Compilation
-- HEX File Generation
-- Proteus Simulation
+* Keil μVision IDE
+* Proteus Professional
+* Project Creation
+* Compilation
+* HEX File Generation
+* Proteus Simulation
+
+---
+
+## ✅ GPIO Programming
+
+### GPIO Fundamentals
+
+* What is GPIO?
+* Digital Input
+* Digital Output
+* Input vs Output
+* GPIO Applications
+
+### 8051 GPIO Ports
+
+* Port 0
+* Port 1
+* Port 2
+* Port 3
+* Port Configuration
+* Input and Output Operations
+
+### GPIO Interfacing
+
+* LED Interfacing
+* Switch Interfacing
+* Button Debouncing
+* Port Read and Write Operations
+* LED Patterns
+* GPIO Testing
+
+### GPIO Practice Programs
+
+* Button Counter
+* Button Toggle LED
+* Port Test
+* Walking One Pattern
+* Walking Zero Pattern
+* LED Bar Graph
+* Knight Rider LED Effect
+* Port Output Demo
+* Port Input Demo
+* GPIO Test Program
 
 ---
 
 # 🚀 Upcoming Topics
 
-- 💡 GPIO Programming
-- 💻 LED Interfacing
-- 🔘 Switch Interfacing
-- 🚦 Traffic Light Controller
-- 🔢 Seven Segment Display
-- ⏱️ Timers
-- 🚨 Interrupts
-- 📡 UART Communication
-- 🔄 SPI Communication
-- 🔗 I2C Communication
-- 📈 ADC & DAC
-- 🎚️ PWM
-- 🚌 CAN Protocol
-- 🛡️ Watchdog Timer
-- 🚀 Bootloader Basics
-- ⚡ RTOS Basics
-- 🛠️ Mini Embedded Project
+* ⏱️ Timers
+* 🚨 Interrupts
+* 📡 UART Communication
+* 🔄 SPI Communication
+* 🔗 I2C Communication
+* 📈 ADC & DAC
+* 🎚️ PWM
+* 🚌 CAN Protocol
+* 🛡️ Watchdog Timer
+* 🚀 Bootloader Basics
+* ⚡ RTOS Basics
+* 🛠️ Mini Embedded Project
 
 ---
 
@@ -388,10 +430,20 @@ Your support motivates me to continue learning, building projects, and sharing m
 
 > **"Consistency beats intensity."**
 
-One day at a time.  
-One concept at a time.  
-One program at a time.  
+One day at a time.
+One concept at a time.
+One program at a time.
 One project at a time.
+
+---
+
+## 🎯 Current Milestone
+
+* ✅ **8 Days Completed**
+* 📚 **80+ C & Embedded C Programs**
+* 💻 **8051 Programming Started**
+* 🔌 **GPIO Programming Completed**
+* 🚀 **Preparing for Timers, Interrupts, and Communication Protocols**
 
 ---
 
