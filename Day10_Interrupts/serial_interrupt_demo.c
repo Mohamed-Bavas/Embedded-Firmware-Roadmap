@@ -1,0 +1,28 @@
+#include <reg51.h>
+
+void Serial_ISR(void) interrupt 4
+{
+    if(RI)
+    {
+        RI = 0;
+        SBUF = SBUF;
+        while(TI == 0);
+        TI = 0;
+    }
+}
+
+void main()
+{
+    TMOD = 0x20;
+
+    TH1 = 0xFD;
+
+    SCON = 0x50;
+
+    TR1 = 1;
+
+    ES = 1;
+    EA = 1;
+
+    while(1);
+}
