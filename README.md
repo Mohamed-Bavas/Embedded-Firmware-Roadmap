@@ -1,4 +1,3 @@
-
 # 🚀 Embedded Firmware Roadmap
 
 Welcome to my **Embedded Firmware Engineer Learning Journey**.
@@ -46,7 +45,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 | Day 07 | 8051 Microcontroller Basics | ✅ |
 | Day 08 | GPIO Programming | ✅ |
 | Day 09 | Timers | ✅ |
-| Day 10 | Interrupts | ⏳ |
+| Day 10 | Interrupts | ✅ |
 | Day 11 | UART | ⏳ |
 | Day 12 | SPI | ⏳ |
 | Day 13 | I2C | ⏳ |
@@ -132,16 +131,17 @@ Embedded-Firmware-Roadmap/
 - ✔️ Completed Day 07 – 8051 Microcontroller Basics.
 - ✔️ Completed Day 08 – GPIO Programming.
 - ✔️ Completed Day 09 – Timers.
-- 🔄 Next: **Day 10 – Interrupts**
+- ✔️ Completed Day 10 – Interrupts.
+- 🔄 Next: **Day 11 – UART**
 
 ---
 
 # 🏆 Progress Tracker
 
-**Completed:** **9 / 20 Days (45%)**
+**Completed:** **10 / 20 Days (50%)**
 
 ```text
-██████████████████░░ 45%
+████████████████████░░░░░░░░░░░░░░░░░░ 50%
 ```
 
 ---
@@ -490,9 +490,67 @@ Embedded-Firmware-Roadmap/
 
 ---
 
+# ✅ Interrupts (Day 10)
+
+## Interrupt Fundamentals
+
+- What is an Interrupt?
+- Why Interrupts are Used
+- Interrupt vs Polling
+- Applications of Interrupts
+
+## 8051 Interrupt Sources
+
+- External Interrupt 0 (INT0)
+- External Interrupt 1 (INT1)
+- Timer 0 Interrupt (TF0)
+- Timer 1 Interrupt (TF1)
+- Serial Interrupt (RI/TI)
+
+## Interrupt Registers
+
+- IE Register (Interrupt Enable)
+- IP Register (Interrupt Priority)
+- TCON Register (Edge/Level Triggering)
+
+## Interrupt Concepts
+
+- Interrupt Vector Table
+- Interrupt Service Routine (ISR)
+- Interrupt Priority
+- Interrupt Enable/Disable
+- Edge Triggered vs Level Triggered
+- Interrupt Latency
+
+## Interrupt Programming
+
+- Enabling Global Interrupts (EA)
+- Enabling Individual Interrupts
+- Writing an ISR in Embedded C
+- Nested Interrupts
+- Interrupt-Driven vs Polling-Based Design
+
+## Interrupt Applications
+
+- External Event Detection
+- Button Press Handling via Interrupt
+- Timer Overflow via Interrupt
+- Real-Time Task Handling
+
+## Interrupt Practice Programs
+
+- ext_int0_demo.c
+- ext_int1_demo.c
+- timer0_interrupt_led_blink.c
+- timer1_interrupt_led_blink.c
+- button_interrupt_toggle_led.c
+- interrupt_priority_demo.c
+- interrupt_vs_polling_demo.c
+
+---
+
 # 🚀 Upcoming Topics
 
-- 🚨 Interrupts
 - 📡 UART Communication
 - 🔄 SPI Communication
 - 🔗 I2C Communication
@@ -533,19 +591,20 @@ One project at a time.
 
 # 🎯 Current Milestone
 
-- ✅ **9 Days Completed**
-- 📚 **90+ C & Embedded C Programs**
+- ✅ **10 Days Completed**
+- 📚 **100+ C & Embedded C Programs**
 - 💻 **8051 Programming Completed**
 - 🔌 **GPIO Programming Completed**
 - ⏱️ **8051 Timers Completed**
-- 🚀 **Preparing for Interrupts, UART, and Communication Protocols**
+- ⚡ **8051 Interrupts Completed**
+- 🚀 **Preparing for UART and Communication Protocols**
 
 ---
 
 ## 🌟 Repository Highlights
 
 - 📖 Well-structured learning roadmap
-- 💻 90+ C and Embedded C programs
+- 💻 100+ C and Embedded C programs
 - 📚 Detailed notes with theory
 - 🔬 8051 practical firmware examples
 - 🛠️ Proteus simulation projects
@@ -560,4 +619,3 @@ One project at a time.
 ⭐ **If you found this repository useful, don't forget to Star it!**
 
 **Happy Coding! 🚀**
-````
