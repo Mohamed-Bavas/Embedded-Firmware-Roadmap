@@ -46,7 +46,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 | Day 08 | GPIO Programming | ✅ |
 | Day 09 | Timers | ✅ |
 | Day 10 | Interrupts | ✅ |
-| Day 11 | UART | ⏳ |
+| Day 11 | UART | ✅ |
 | Day 12 | SPI | ⏳ |
 | Day 13 | I2C | ⏳ |
 | Day 14 | ADC & DAC | ⏳ |
@@ -63,9 +63,9 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 
 ```text
 Embedded-Firmware-Roadmap/
-│
+
 ├── README.md
-│
+
 ├── Day01_C_Basics/
 ├── Day02_Pointers/
 ├── Day03_Functions_Memory/
@@ -86,7 +86,7 @@ Embedded-Firmware-Roadmap/
 ├── Day18_Bootloader/
 ├── Day19_RTOS/
 ├── Day20_Mini_Project/
-│
+
 ├── Interview_Programs/
 ├── Mini_Projects/
 ├── Notes/
@@ -132,426 +132,102 @@ Embedded-Firmware-Roadmap/
 - ✔️ Completed Day 08 – GPIO Programming.
 - ✔️ Completed Day 09 – Timers.
 - ✔️ Completed Day 10 – Interrupts.
-- 🔄 Next: **Day 11 – UART**
+- ✔️ Completed Day 11 – UART.
+- 🔄 Next: **Day 12 – SPI**
 
 ---
 
 # 🏆 Progress Tracker
 
-**Completed:** **10 / 20 Days (50%)**
+**Completed:** **11 / 20 Days (55%)**
 
 ```text
-████████████████████░░░░░░░░░░░░░░░░░░ 50%
+██████████████████████░░░░░░░░░░░░░░░░ 55%
 ```
 
 ---
 
-# 📈 Skills Covered So Far
+# 📡 UART (Day 11)
 
-## ✅ C Programming Fundamentals
+## UART Fundamentals
 
-- Variables
-- Data Types
-- Operators
-- printf() and scanf()
-- Conditional Statements
-- Loops
+- What is UART?
+- Why UART is Used
+- Features of UART
+- Applications of UART
 
----
+## Communication Basics
 
-## ✅ Functions
+- Serial Communication
+- Parallel Communication
+- Asynchronous Communication
+- Full Duplex Communication
+- TX and RX Lines
 
-- Function Declaration
-- Function Definition
-- Function Prototype
-- Function Arguments
-- Return Values
-- Call by Value
-- Call by Reference
-- Recursion
+## 8051 UART Hardware
 
----
+- UART Serial Port
+- TXD (P3.1)
+- RXD (P3.0)
 
-## ✅ Pointers
+## UART Registers
 
-- Pointer Basics
-- Address Operator (&)
-- Dereference Operator (*)
-- Pointer Arithmetic
-- Passing Pointers to Functions
-
----
-
-## ✅ Arrays
-
-- One-Dimensional Arrays
-- Array Traversal
-- Sum of Elements
-- Reverse Array
-
----
-
-## ✅ Strings
-
-- String Length
-- String Copy
-- String Compare
-- String Concatenation
-
----
-
-## ✅ Memory Concepts
-
-- Local Variables
-- Global Variables
-- Static Variables
-- Storage Classes
-  - auto
-  - register
-  - static
-  - extern
-- Memory Layout
-  - Text Segment
-  - Data Segment
-  - BSS
-  - Heap
-  - Stack
-
----
-
-## ✅ User Defined Data Types
-
-- Structures
-- Nested Structures
-- Array of Structures
-- Pointer to Structure
-- Self Referential Structure
-- Union
-- Structure vs Union
-- Enumeration
-- typedef
-- Bit Fields
-- Structure Padding
-- Memory Alignment
-
----
-
-## ✅ File Handling
-
-- FILE Pointer
-- fopen()
-- fclose()
-- fprintf()
-- fscanf()
-- fgetc()
-- fputc()
-- fgets()
-- fputs()
-- fread()
-- fwrite()
-
----
-
-## ✅ C Preprocessor
-
-- #include
-- #define
-- Function-like Macros
-- Header Files
-- Include Guards
-- Conditional Compilation
-- #undef
-- #pragma
-
----
-
-## ✅ Bitwise Operators
-
-- Binary Numbers
-- Hexadecimal Numbers
-- Bitwise AND
-- Bitwise OR
-- Bitwise XOR
-- Bitwise NOT
-- Left Shift
-- Right Shift
-- Set Bit
-- Clear Bit
-- Toggle Bit
-- Check Bit
-- Bit Masking
-
----
-
-## ✅ Embedded C Concepts
-
-- Introduction to Embedded C
-- Embedded C vs C
-- volatile Keyword
-- const Keyword
-- Register-Level Programming
-- Memory Mapped I/O
-- Embedded Coding Standards
-
----
-
-## ✅ Embedded Systems
-
-- Introduction
-- Characteristics
-- Hardware Components
-- Software Components
-- Applications
-
----
-
-## ✅ Microcontrollers
-
-- Introduction
-- Microcontroller vs Microprocessor
-- Features
-- Applications
-- Block Diagram
-
----
-
-## ✅ 8051 Microcontroller
-
-- History
-- Features
-- Architecture
-- Pin Diagram
-- Memory Organization
-- Register Banks
-- Internal RAM
-- Program Memory
-- Special Function Registers
-- Clock Circuit
-- Reset Circuit
-- Machine Cycle
-- Instruction Cycle
-
----
-
-## ✅ 8051 Ports
-
-- Port 0
-- Port 1
-- Port 2
-- Port 3
-- Alternate Functions
-- Internal Pull-up
-- External Pull-up
-
----
-
-## ✅ Development Environment
-
-- Keil μVision IDE
-- Proteus Professional
-- Project Creation
-- Compilation
-- HEX File Generation
-- Proteus Simulation
-
----
-
-## ✅ GPIO Programming
-
-### GPIO Fundamentals
-
-- GPIO Introduction
-- Digital Input
-- Digital Output
-- Input vs Output
-- GPIO Applications
-
-### GPIO Ports
-
-- Port 0
-- Port 1
-- Port 2
-- Port 3
-- Port Configuration
-- Input Operations
-- Output Operations
-
-### GPIO Interfacing
-
-- LED Interfacing
-- Switch Interfacing
-- Button Debouncing
-- Port Read/Write
-- LED Patterns
-- GPIO Testing
-
-### GPIO Practice Programs
-
-- LED Blink
-- LED Toggle
-- Alternate LED Blink
-- Running LED
-- Switch LED Control
-- Dual Switch Dual LED
-- Port Mirror
-- Traffic Light Controller
-- LED Pattern Generator
-- Binary Counter
-- Button Counter
-- Button Toggle LED
-- Walking One
-- Walking Zero
-- LED Bar Graph
-- Knight Rider LED
-- Port Test
-
----
-
-# ✅ Timers (Day 09)
-
-## Timer Fundamentals
-
-- What is a Timer?
-- Why Timers are Used
-- Timer vs Software Delay
-- Applications of Timers
-
-## Timer vs Counter
-
-- Timer Mode
-- Counter Mode
-- Difference Between Timer and Counter
-
-## 8051 Timers
-
-- Timer 0
-- Timer 1
-- Features
-- Applications
-
-## Timer Registers
-
+- SCON Register
+- SBUF Register
 - TMOD Register
-- TCON Register
-- TH0
-- TL0
-- TH1
-- TL1
-- TF0
-- TF1
-- TR0
-- TR1
+- TH1 Register
+- PCON Register
 
-## Timer Modes
+## UART Modes
 
-- Mode 0 (13-bit Timer)
-- Mode 1 (16-bit Timer)
-- Mode 2 (8-bit Auto Reload)
-- Mode 3 (Split Timer)
+- Mode 0
+- Mode 1 (8-bit UART)
+- Mode 2
+- Mode 3
 
-## Delay Calculation
+## Baud Rate
 
-- Machine Cycle
-- Timer Tick
-- Overflow Count
-- Initial Count Calculation
-- THx/TLx Calculation
+- What is Baud Rate?
+- Baud Rate Calculation
+- Timer1 Mode 2
+- TH1 Value Calculation
+- Common Baud Rates
 
-## Timer Programming
+## UART Programming
 
-- Polling Method
-- Timer Overflow
-- Delay Generation
-- Square Wave Generation
-- Timer Initialization
-- Starting and Stopping Timers
+- UART Initialization
+- Character Transmission
+- Character Reception
+- String Transmission
+- Echo Program
 
-## Timer Applications
+## UART Practice Programs
 
-- LED Blinking
-- LED Toggle
-- Stopwatch
-- Delay Generation
-- Square Wave Generator
-- Time Measurement
+- uart_initialize.c
+- uart_transmit_char.c
+- uart_receive_char.c
+- uart_send_string.c
+- uart_echo.c
+- uart_terminal_demo.c
+- uart_receive_string.c
+- uart_uppercase_converter.c
+- uart_led_control.c
+- uart_menu_program.c
 
-## Timer Practice Programs
+## UART Applications
 
-- timer0_delay.c
-- timer1_delay.c
-- led_blink_timer0.c
-- led_toggle_timer1.c
-- timer_mode0_demo.c
-- timer_mode1_demo.c
-- timer_mode2_demo.c
-- timer_overflow_polling.c
-- square_wave_generator.c
-- stopwatch_timer.c
-
----
-
-# ✅ Interrupts (Day 10)
-
-## Interrupt Fundamentals
-
-- What is an Interrupt?
-- Why Interrupts are Used
-- Interrupt vs Polling
-- Applications of Interrupts
-
-## 8051 Interrupt Sources
-
-- External Interrupt 0 (INT0)
-- External Interrupt 1 (INT1)
-- Timer 0 Interrupt (TF0)
-- Timer 1 Interrupt (TF1)
-- Serial Interrupt (RI/TI)
-
-## Interrupt Registers
-
-- IE Register (Interrupt Enable)
-- IP Register (Interrupt Priority)
-- TCON Register (Edge/Level Triggering)
-
-## Interrupt Concepts
-
-- Interrupt Vector Table
-- Interrupt Service Routine (ISR)
-- Interrupt Priority
-- Interrupt Enable/Disable
-- Edge Triggered vs Level Triggered
-- Interrupt Latency
-
-## Interrupt Programming
-
-- Enabling Global Interrupts (EA)
-- Enabling Individual Interrupts
-- Writing an ISR in Embedded C
-- Nested Interrupts
-- Interrupt-Driven vs Polling-Based Design
-
-## Interrupt Applications
-
-- External Event Detection
-- Button Press Handling via Interrupt
-- Timer Overflow via Interrupt
-- Real-Time Task Handling
-
-## Interrupt Practice Programs
-
-- ext_int0_demo.c
-- ext_int1_demo.c
-- timer0_interrupt_led_blink.c
-- timer1_interrupt_led_blink.c
-- button_interrupt_toggle_led.c
-- interrupt_priority_demo.c
-- interrupt_vs_polling_demo.c
+- PC Communication
+- GPS Modules
+- GSM Modules
+- Bluetooth (HC-05)
+- ESP8266 Wi-Fi Module
+- Firmware Debugging
+- Industrial Automation
 
 ---
 
 # 🚀 Upcoming Topics
 
-- 📡 UART Communication
 - 🔄 SPI Communication
 - 🔗 I2C Communication
 - 📈 ADC & DAC
@@ -591,20 +267,21 @@ One project at a time.
 
 # 🎯 Current Milestone
 
-- ✅ **10 Days Completed**
-- 📚 **100+ C & Embedded C Programs**
+- ✅ **11 Days Completed**
+- 📚 **110+ C & Embedded C Programs**
 - 💻 **8051 Programming Completed**
 - 🔌 **GPIO Programming Completed**
 - ⏱️ **8051 Timers Completed**
 - ⚡ **8051 Interrupts Completed**
-- 🚀 **Preparing for UART and Communication Protocols**
+- 📡 **8051 UART Communication Completed**
+- 🚀 **Preparing for SPI Communication**
 
 ---
 
-## 🌟 Repository Highlights
+# 🌟 Repository Highlights
 
 - 📖 Well-structured learning roadmap
-- 💻 100+ C and Embedded C programs
+- 💻 110+ C and Embedded C programs
 - 📚 Detailed notes with theory
 - 🔬 8051 practical firmware examples
 - 🛠️ Proteus simulation projects
