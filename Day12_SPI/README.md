@@ -348,7 +348,5 @@ This knowledge helps in interfacing external memories, sensors, displays, and co
 
 ⭐ **Next Day (Day 13):** **I²C (Inter Integrated Circuit) Communication in 8051**
 
-```
 
 This Day 12 README matches your **Day 11 GitHub learning log style** and is suitable for an **Embedded Firmware Engineer portfolio repository**.
-```
