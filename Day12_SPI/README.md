@@ -1,6 +1,5 @@
 Based on your **Day 11 UART README format**, here is the complete **Day 12 – SPI Communication in 8051 README** for your Embedded Firmware Engineer Learning Journey.
 
-````markdown
 # 📅 Day 12 – SPI (Serial Peripheral Interface) Communication in 8051
 
 Welcome to **Day 12** of my **Embedded Firmware Engineer Learning Journey**.
