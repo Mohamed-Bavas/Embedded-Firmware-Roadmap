@@ -1,67 +1,175 @@
-# 🚀 Embedded Firmware Roadmap
+🚀 Embedded Firmware Roadmap
 
-Welcome to my **Embedded Firmware Engineer Learning Journey**.
+Welcome to my Embedded Firmware Engineer Learning Journey.
 
-This repository documents my daily progress as I learn **Embedded C**, **Microcontrollers**, **Communication Protocols**, and **Firmware Development**. My goal is to build strong programming skills, create practical projects, and prepare for Embedded Firmware Engineer interviews.
+This repository documents my daily progress as I learn Embedded C, Microcontrollers, Communication Protocols, and Firmware Development. My goal is to build strong programming skills, create practical projects, and prepare for Embedded Firmware Engineer interviews.
 
----
+🎯 Goals
 
-# 🎯 Goals
+Build a strong foundation in C and Embedded C programming.
 
-- Build a strong foundation in C and Embedded C programming.
-- Master memory management, bit manipulation, register-level programming, and GPIO programming.
-- Understand 8051 and STM32 microcontroller architecture and peripherals.
-- Learn embedded communication protocols (UART, SPI, I2C, CAN).
-- Develop practical embedded firmware projects using Embedded C.
-- Strengthen problem-solving and embedded interview skills.
-- Maintain a consistent learning portfolio on GitHub.
+Master memory management, bit manipulation, register-level programming, and GPIO programming.
 
----
+Understand 8051 and STM32 microcontroller architecture and peripherals.
 
-# 🛠️ Technologies & Tools
+Learn embedded communication protocols (UART, SPI, I2C, CAN).
 
-- C Programming
-- Embedded C
-- 8051 Microcontroller
-- STM32 Microcontroller
-- VS Code
-- STM32CubeIDE
-- Keil μVision
-- Proteus
-- Git & GitHub
+Develop practical embedded firmware projects using Embedded C.
 
----
+Strengthen problem-solving and embedded interview skills.
 
-# 📅 Learning Roadmap
+Maintain a consistent learning portfolio on GitHub.
 
-| Day    | Topic                               | Status |
-| ------ | ----------------------------------- | :----: |
-| Day 01 | C Programming Basics                |    ✅   |
-| Day 02 | Pointers, Arrays & Strings          |    ✅   |
-| Day 03 | Functions, Storage Classes & Memory |    ✅   |
-| Day 04 | Structures, Unions & Enums          |    ✅   |
-| Day 05 | File Handling & Preprocessor        |    ✅   |
-| Day 06 | Bitwise Operators & Embedded C      |    ✅   |
-| Day 07 | 8051 Microcontroller Basics         |    ✅   |
-| Day 08 | GPIO Programming                    |    ✅   |
-| Day 09 | Timers                              |    ✅   |
-| Day 10 | Interrupts                          |    ✅   |
-| Day 11 | UART                                |    ✅   |
-| Day 12 | SPI                                 |    ✅   |
-| Day 13 | I2C                                 |    ✅   |
-| Day 14 | ADC & DAC                           |    ⏳   |
-| Day 15 | PWM                                 |    ⏳   |
-| Day 16 | CAN Protocol                        |    ⏳   |
-| Day 17 | Watchdog Timer                      |    ⏳   |
-| Day 18 | Bootloader Basics                   |    ⏳   |
-| Day 19 | RTOS Basics                         |    ⏳   |
-| Day 20 | Mini Embedded Project               |    ⏳   |
+🛠️ Technologies & Tools
 
----
+C Programming
 
-# 📂 Repository Structure
+Embedded C
 
-```text
+8051 Microcontroller
+
+STM32 Microcontroller
+
+VS Code
+
+STM32CubeIDE
+
+Keil μVision
+
+Proteus
+
+Git & GitHub
+
+📅 Learning Roadmap
+
+Day
+
+Topic
+
+Status
+
+Day 01
+
+C Programming Basics
+
+✅
+
+Day 02
+
+Pointers, Arrays & Strings
+
+✅
+
+Day 03
+
+Functions, Storage Classes & Memory
+
+✅
+
+Day 04
+
+Structures, Unions & Enums
+
+✅
+
+Day 05
+
+File Handling & Preprocessor
+
+✅
+
+Day 06
+
+Bitwise Operators & Embedded C
+
+✅
+
+Day 07
+
+8051 Microcontroller Basics
+
+✅
+
+Day 08
+
+GPIO Programming
+
+✅
+
+Day 09
+
+Timers
+
+✅
+
+Day 10
+
+Interrupts
+
+✅
+
+Day 11
+
+UART
+
+✅
+
+Day 12
+
+SPI
+
+✅
+
+Day 13
+
+I2C
+
+✅
+
+Day 14
+
+ADC & DAC
+
+✅
+
+Day 15
+
+PWM
+
+⏳
+
+Day 16
+
+CAN Protocol
+
+⏳
+
+Day 17
+
+Watchdog Timer
+
+⏳
+
+Day 18
+
+Bootloader Basics
+
+⏳
+
+Day 19
+
+RTOS Basics
+
+⏳
+
+Day 20
+
+Mini Embedded Project
+
+⏳
+
+📂 Repository Structure
+
 Embedded-Firmware-Roadmap/
 
 ├── README.md
@@ -91,386 +199,698 @@ Embedded-Firmware-Roadmap/
 ├── Mini_Projects/
 ├── Notes/
 └── Resources/
-```
 
----
+📚 Learning Resources
 
-# 📚 Learning Resources
+Official C Programming Documentation
 
-- Official C Programming Documentation
-- Embedded C Tutorials
-- 8051 Datasheets
-- STM32 Reference Manuals
-- STM32 HAL Documentation
-- ARM Cortex-M Documentation
+Embedded C Tutorials
 
----
+8051 Datasheets
 
-# 💻 What You'll Find
+STM32 Reference Manuals
 
-- ✅ C Programming Examples
-- ✅ Embedded C Programs
-- ✅ 8051 Firmware Examples
-- ✅ STM32 Projects
-- ✅ Communication Protocol Examples
-- ✅ Interview-Oriented Programs
-- ✅ Detailed Notes and Explanations
-- ✅ Practical Mini Projects
-
----
+STM32 HAL Documentation
 
-# 🎯 Current Progress
+ARM Cortex-M Documentation
 
-- ✔️ Started my Embedded Firmware learning journey.
-- ✔️ Completed Day 01 – C Programming Basics.
-- ✔️ Completed Day 02 – Pointers, Arrays & Strings.
-- ✔️ Completed Day 03 – Functions, Storage Classes & Memory.
-- ✔️ Completed Day 04 – Structures, Unions & Enums.
-- ✔️ Completed Day 05 – File Handling & Preprocessor.
-- ✔️ Completed Day 06 – Bitwise Operators & Embedded C.
-- ✔️ Completed Day 07 – 8051 Microcontroller Basics.
-- ✔️ Completed Day 08 – GPIO Programming.
-- ✔️ Completed Day 09 – Timers.
-- ✔️ Completed Day 10 – Interrupts.
-- ✔️ Completed Day 11 – UART Communication.
-- ✔️ Completed Day 12 – SPI Communication.
-- ✔️ Completed Day 13 – I2C Communication.
-- 🔄 Next: **Day 14 – ADC & DAC**
+💻 What You'll Find
 
----
+✅ C Programming Examples
 
-# 🏆 Progress Tracker
+✅ Embedded C Programs
 
-**Completed:** **13 / 20 Days (65%)**
+✅ 8051 Firmware Examples
 
-```text
-██████████████████████████░░░░░░░░░░░░ 65%
-```
+✅ STM32 Projects
 
----
+✅ Communication Protocol Examples
 
-# 📡 UART (Day 11)
+✅ Interview-Oriented Programs
 
-## UART Fundamentals
+✅ Detailed Notes and Explanations
 
-- What is UART?
-- Why UART is Used
-- Features of UART
-- Applications of UART
+✅ Practical Mini Projects
 
-## Communication Basics
+🎯 Current Progress
 
-- Serial Communication
-- Parallel Communication
-- Asynchronous Communication
-- Full Duplex Communication
-- TX and RX Lines
+✔️ Started my Embedded Firmware learning journey.
 
-## 8051 UART Hardware
+✔️ Completed Day 01 – C Programming Basics.
 
-- UART Serial Port
-- TXD (P3.1)
-- RXD (P3.0)
+✔️ Completed Day 02 – Pointers, Arrays & Strings.
 
-## UART Registers
+✔️ Completed Day 03 – Functions, Storage Classes & Memory.
 
-- SCON Register
-- SBUF Register
-- TMOD Register
-- TH1 Register
-- PCON Register
+✔️ Completed Day 04 – Structures, Unions & Enums.
 
-## UART Modes
+✔️ Completed Day 05 – File Handling & Preprocessor.
 
-- Mode 0
-- Mode 1 (8-bit UART)
-- Mode 2
-- Mode 3
+✔️ Completed Day 06 – Bitwise Operators & Embedded C.
 
-## Baud Rate
+✔️ Completed Day 07 – 8051 Microcontroller Basics.
 
-- What is Baud Rate?
-- Baud Rate Calculation
-- Timer1 Mode 2
-- TH1 Value Calculation
-- Common Baud Rates
+✔️ Completed Day 08 – GPIO Programming.
 
-## UART Practice Programs
-
-- uart_initialize.c
-- uart_transmit_char.c
-- uart_receive_char.c
-- uart_send_string.c
-- uart_echo.c
-- uart_terminal_demo.c
-- uart_receive_string.c
-- uart_uppercase_converter.c
-- uart_led_control.c
-- uart_menu_program.c
+✔️ Completed Day 09 – Timers.
 
-## UART Applications
-
-- PC Communication
-- GPS Modules
-- GSM Modules
-- Bluetooth HC-05
-- ESP8266 Wi-Fi Module
-- Firmware Debugging
-- Industrial Automation
+✔️ Completed Day 10 – Interrupts.
 
----
+✔️ Completed Day 11 – UART Communication.
 
-# 🔌 SPI (Day 12)
+✔️ Completed Day 12 – SPI Communication.
 
-## SPI Fundamentals
+✔️ Completed Day 13 – I2C Communication.
 
-- What is SPI?
-- Why SPI is Used
-- Features of SPI
-- Applications of SPI
-- Advantages and Limitations of SPI
+✔️ Completed Day 14 – ADC & DAC.
 
----
+🔄 Next: Day 15 – PWM
 
-## SPI Communication Basics
+🏆 Progress Tracker
 
-- Synchronous Communication
-- Master and Slave Architecture
-- Full Duplex Communication
-- Clock Synchronization
-- Data Transfer Process
+Completed: 14 / 20 Days (70%)
 
----
+████████████████████████████░░░░░░░░░░ 70%
 
-## SPI Communication Lines
+📡 UART (Day 11)
 
-| Signal | Full Form | Function |
-|--------|-----------|----------|
-| MOSI | Master Out Slave In | Master sends data |
-| MISO | Master In Slave Out | Slave sends data |
-| SCK | Serial Clock | Clock generated by master |
-| SS/CS | Slave Select | Selects slave device |
+UART Fundamentals
 
----
+What is UART?
 
-## SPI in 8051
+Why UART is Used
 
-- Classic 8051 does not have built-in SPI hardware.
-- SPI is implemented using GPIO pins.
-- Software SPI technique is used.
-- Data transfer is controlled manually.
+Features of UART
 
----
+Applications of UART
 
-## SPI Pin Configuration
+Communication Basics
 
-| 8051 Pin | SPI Function |
-|----------|--------------|
-| P1.0 | MOSI |
-| P1.1 | MISO |
-| P1.2 | SCK |
-| P1.3 | SS / CS |
+Serial Communication
 
----
+Parallel Communication
 
-## SPI Programming
+Asynchronous Communication
 
-- SPI Initialization
-- Master Transmission
-- Slave Reception
-- Master Reception
-- String Transfer
-- External Device Interface
+Full Duplex Communication
 
----
+TX and RX Lines
 
-## SPI Practice Programs
+8051 UART Hardware
 
-- spi_initialize.c
-- spi_master_transmit.c
-- spi_slave_receive.c
-- spi_master_receive.c
-- spi_send_string.c
-- spi_receive_string.c
-- spi_eeprom_interface.c
-- spi_adc_interface.c
-- spi_sensor_interface.c
-- spi_display_interface.c
+UART Serial Port
 
----
+TXD (P3.1)
 
-## SPI Applications
+RXD (P3.0)
 
-- EEPROM Interface
-- Flash Memory
-- SD Card Communication
-- OLED Display
-- TFT Display
-- ADC/DAC Modules
-- Sensors
-- Industrial Controllers
-- Automotive Electronics
+UART Registers
 
----
+SCON Register
 
-# 🔗 I2C (Day 13)
+SBUF Register
 
-## I2C Fundamentals
+TMOD Register
 
-- What is I2C?
-- Why I2C is Used
-- Features of I2C
-- Applications of I2C
-- Advantages and Limitations of I2C
+TH1 Register
 
----
+PCON Register
 
-## I2C Communication Basics
+UART Modes
 
-- Synchronous, Two-Wire Communication
-- Master and Slave Architecture
-- Half Duplex Communication
-- Open-Drain Configuration & Pull-Up Resistors
-- START, STOP, and ACK/NACK Conditions
-- 7-bit and 10-bit Addressing
+Mode 0
 
----
+Mode 1 (8-bit UART)
 
-## I2C Communication Lines
+Mode 2
 
-| Signal | Full Form | Function |
-|--------|-----------|----------|
-| SDA | Serial Data | Bidirectional data line |
-| SCL | Serial Clock | Clock generated by master |
+Mode 3
 
----
+Baud Rate
 
-## I2C in 8051
+What is Baud Rate?
 
-- Classic 8051 does not have built-in I2C hardware.
-- I2C is implemented using GPIO pins.
-- Software I2C (bit-banging) technique is used.
-- Data transfer is controlled manually via bit-level timing.
+Baud Rate Calculation
 
----
+Timer1 Mode 2
 
-## I2C Pin Configuration
+TH1 Value Calculation
 
-| 8051 Pin | I2C Function |
-|----------|--------------|
-| P1.0 | SDA |
-| P1.1 | SCL |
+Common Baud Rates
 
----
+UART Practice Programs
 
-## I2C Programming
+uart_initialize.c
 
-- I2C Initialization
-- Start and Stop Condition Generation
-- Master Transmit (Write)
-- Master Receive (Read)
-- Multi-Byte Data Transfer
-- External Device Interface
+uart_transmit_char.c
 
----
+uart_receive_char.c
 
-## I2C Practice Programs
+uart_send_string.c
 
-- i2c_initialize.c
-- i2c_start_stop.c
-- i2c_master_write.c
-- i2c_master_read.c
-- i2c_send_string.c
-- i2c_receive_string.c
-- i2c_eeprom_interface.c
-- i2c_rtc_interface.c
-- i2c_sensor_interface.c
-- i2c_display_interface.c
+uart_echo.c
 
----
+uart_terminal_demo.c
 
-## I2C Applications
+uart_receive_string.c
 
-- EEPROM Interface
-- RTC Modules (DS1307/DS3231)
-- Sensors (Temperature, Accelerometer, etc.)
-- OLED Displays
-- Port Expanders
-- Multi-Device Bus Communication
-- Industrial Controllers
-- Consumer Electronics
+uart_uppercase_converter.c
 
----
+uart_led_control.c
 
-# 🚀 Upcoming Topics
+uart_menu_program.c
 
-- 📈 ADC & DAC
-- 🎚️ PWM
-- 🚌 CAN Protocol
-- 🛡️ Watchdog Timer
-- 🚀 Bootloader Basics
-- ⚡ RTOS Basics
-- 🛠️ Mini Embedded Project
+UART Applications
 
----
+PC Communication
 
-# 🤝 Connect With Me
+GPS Modules
+
+GSM Modules
+
+Bluetooth HC-05
+
+ESP8266 Wi-Fi Module
+
+Firmware Debugging
+
+Industrial Automation
+
+🔌 SPI (Day 12)
+
+SPI Fundamentals
+
+What is SPI?
+
+Why SPI is Used
+
+Features of SPI
+
+Applications of SPI
+
+Advantages and Limitations of SPI
+
+SPI Communication Basics
+
+Synchronous Communication
+
+Master and Slave Architecture
+
+Full Duplex Communication
+
+Clock Synchronization
+
+Data Transfer Process
+
+SPI Communication Lines
+
+Signal
+
+Full Form
+
+Function
+
+MOSI
+
+Master Out Slave In
+
+Master sends data
+
+MISO
+
+Master In Slave Out
+
+Slave sends data
+
+SCK
+
+Serial Clock
+
+Clock generated by master
+
+SS/CS
+
+Slave Select
+
+Selects slave device
+
+SPI in 8051
+
+Classic 8051 does not have built-in SPI hardware.
+
+SPI is implemented using GPIO pins.
+
+Software SPI technique is used.
+
+Data transfer is controlled manually.
+
+SPI Pin Configuration
+
+8051 Pin
+
+SPI Function
+
+P1.0
+
+MOSI
+
+P1.1
+
+MISO
+
+P1.2
+
+SCK
+
+P1.3
+
+SS / CS
+
+SPI Programming
+
+SPI Initialization
+
+Master Transmission
+
+Slave Reception
+
+Master Reception
+
+String Transfer
+
+External Device Interface
+
+SPI Practice Programs
+
+spi_initialize.c
+
+spi_master_transmit.c
+
+spi_slave_receive.c
+
+spi_master_receive.c
+
+spi_send_string.c
+
+spi_receive_string.c
+
+spi_eeprom_interface.c
+
+spi_adc_interface.c
+
+spi_sensor_interface.c
+
+spi_display_interface.c
+
+SPI Applications
+
+EEPROM Interface
+
+Flash Memory
+
+SD Card Communication
+
+OLED Display
+
+TFT Display
+
+ADC/DAC Modules
+
+Sensors
+
+Industrial Controllers
+
+Automotive Electronics
+
+🔗 I2C (Day 13)
+
+I2C Fundamentals
+
+What is I2C?
+
+Why I2C is Used
+
+Features of I2C
+
+Applications of I2C
+
+Advantages and Limitations of I2C
+
+I2C Communication Basics
+
+Synchronous, Two-Wire Communication
+
+Master and Slave Architecture
+
+Half Duplex Communication
+
+Open-Drain Configuration & Pull-Up Resistors
+
+START, STOP, and ACK/NACK Conditions
+
+7-bit and 10-bit Addressing
+
+I2C Communication Lines
+
+Signal
+
+Full Form
+
+Function
+
+SDA
+
+Serial Data
+
+Bidirectional data line
+
+SCL
+
+Serial Clock
+
+Clock generated by master
+
+I2C in 8051
+
+Classic 8051 does not have built-in I2C hardware.
+
+I2C is implemented using GPIO pins.
+
+Software I2C (bit-banging) technique is used.
+
+Data transfer is controlled manually via bit-level timing.
+
+I2C Pin Configuration
+
+8051 Pin
+
+I2C Function
+
+P1.0
+
+SDA
+
+P1.1
+
+SCL
+
+I2C Programming
+
+I2C Initialization
+
+Start and Stop Condition Generation
+
+Master Transmit (Write)
+
+Master Receive (Read)
+
+Multi-Byte Data Transfer
+
+External Device Interface
+
+I2C Practice Programs
+
+i2c_initialize.c
+
+i2c_start_stop.c
+
+i2c_master_write.c
+
+i2c_master_read.c
+
+i2c_send_string.c
+
+i2c_receive_string.c
+
+i2c_eeprom_interface.c
+
+i2c_rtc_interface.c
+
+i2c_sensor_interface.c
+
+i2c_display_interface.c
+
+I2C Applications
+
+EEPROM Interface
+
+RTC Modules (DS1307/DS3231)
+
+Sensors (Temperature, Accelerometer, etc.)
+
+OLED Displays
+
+Port Expanders
+
+Multi-Device Bus Communication
+
+Industrial Controllers
+
+Consumer Electronics
+
+📈 ADC & DAC (Day 14)
+
+ADC Fundamentals
+
+What is ADC?
+
+Why ADC is Used in Embedded Systems
+
+Analog vs Digital Signals
+
+ADC Resolution
+
+Reference Voltage (Vref)
+
+Sampling Rate
+
+Conversion Time
+
+Quantization and Quantization Error
+
+ADC Step Size
+
+ADC Working Principle
+
+Sample and Hold
+
+Successive Approximation Register (SAR) ADC
+
+Flash ADC – Basic Overview
+
+Analog Input Sampling
+
+Digital Code Generation
+
+ADC Conversion Process
+
+ADC in 8051
+
+Classic 8051 does not have built-in ADC hardware.
+
+External ADC such as ADC0804 or ADC0808 is used.
+
+ADC0808 provides 8 analog input channels.
+
+Channel selection is performed using A, B, and C address lines.
+
+ADC0808 Control Signals
+
+Signal
+
+Function
+
+ALE
+
+Address Latch Enable
+
+START
+
+Starts ADC conversion
+
+EOC
+
+Indicates End of Conversion
+
+OE
+
+Enables digital output
+
+CLK
+
+ADC clock
+
+D0–D7
+
+8-bit digital output
+
+ADC Practice Programs
+
+adc_initialize.c
+
+adc_single_channel_read.c
+
+adc_multi_channel_read.c
+
+adc_temperature_sensor.c
+
+adc_potentiometer_read.c
+
+adc_light_sensor_ldr.c
+
+adc_to_uart_display.c
+
+adc_threshold_alert.c
+
+DAC Fundamentals
+
+What is DAC?
+
+Why DAC is Used
+
+DAC Resolution
+
+Reference Voltage
+
+Step Size
+
+Settling Time
+
+Digital-to-Analog Conversion
+
+DAC Working Principle
+
+R-2R Ladder DAC
+
+Weighted Resistor DAC
+
+Binary Input to Analog Output Conversion
+
+Current-to-Voltage Conversion
+
+DAC0808 Interfacing
+
+DAC0808 is an 8-bit current-output DAC.
+
+Digital data is supplied from the 8051.
+
+Current output is converted into voltage using an external op-amp.
+
+Waveforms can be generated using digital lookup tables.
+
+DAC Practice Programs
+
+dac_initialize.c
+
+dac_generate_ramp_wave.c
+
+dac_generate_triangle_wave.c
+
+dac_generate_sine_wave.c
+
+dac_variable_voltage_output.c
+
+ADC & DAC Applications
+
+Temperature Measurement
+
+Light Intensity Measurement
+
+Battery Voltage Monitoring
+
+Potentiometer and Joystick Input
+
+Sensor Interfacing
+
+Audio Signal Generation
+
+Waveform Generation
+
+Motor Control
+
+Signal Conditioning
+
+🚀 Upcoming Topics
+
+📈 ADC & DAC
+
+🎚️ PWM
+
+🚌 CAN Protocol
+
+🛡️ Watchdog Timer
+
+🚀 Bootloader Basics
+
+⚡ RTOS Basics
+
+🛠️ Mini Embedded Project
+
+🤝 Connect With Me
 
 I enjoy learning, building embedded systems, and sharing my progress.
 
 If you have suggestions, feedback, or ideas for improvement, feel free to open an issue or connect with me on GitHub.
 
----
-
-# ⭐ Support
+⭐ Support
 
 If you find this repository helpful, consider giving it a ⭐ Star.
 
 Your support motivates me to continue learning, building projects, and sharing my progress with the community.
 
----
+📈 Learning Philosophy
 
-# 📈 Learning Philosophy
+"Consistency beats intensity."
 
-> **"Consistency beats intensity."**
-
-One day at a time.  
-One concept at a time.  
-One program at a time.  
+One day at a time.
+One concept at a time.
+One program at a time.
 One project at a time.
 
----
+🎯 Current Milestone
 
-# 🎯 Current Milestone
+✅ 13 Days Completed
 
-- ✅ **13 Days Completed**
-- 📚 **130+ C & Embedded C Programs**
-- 💻 **8051 Programming Completed**
-- 🔌 **GPIO Programming Completed**
-- ⏱️ **8051 Timers Completed**
-- ⚡ **8051 Interrupts Completed**
-- 📡 **8051 UART Communication Completed**
-- 🔄 **SPI Communication Completed**
-- 🔗 **I2C Communication Completed**
-- 🚀 **Preparing for ADC & DAC**
+📚 130+ C & Embedded C Programs
 
----
+💻 8051 Programming Completed
 
-# 🌟 Repository Highlights
+🔌 GPIO Programming Completed
 
-- 📖 Well-structured learning roadmap
-- 💻 130+ C and Embedded C programs
-- 📚 Detailed notes with theory
-- 🔬 8051 practical firmware examples
-- 🛠️ Proteus simulation projects
-- 🎯 Interview-oriented coding questions
-- 🚀 Mini projects for hands-on practice
-- 📈 Daily progress tracking
+⏱️ 8051 Timers Completed
 
----
+⚡ 8051 Interrupts Completed
 
-**Thank you for visiting my repository!**
+📡 8051 UART Communication Completed
 
-⭐ **If you found this repository useful, don't forget to Star it!**
+🔄 SPI Communication Completed
 
-**Happy Coding! 🚀**
+🔗 I2C Communication Completed
+
+📈 ADC & DAC Completed
+
+🚀 Preparing for PWM
+
+🌟 Repository Highlights
+
+📖 Well-structured learning roadmap
+
+💻 130+ C and Embedded C programs
+
+📚 Detailed notes with theory
+
+🔬 8051 practical firmware examples
+
+🛠️ Proteus simulation projects
+
+🎯 Interview-oriented coding questions
+
+🚀 Mini projects for hands-on practice
+
+📈 Daily progress tracking
+
+Thank you for visiting my repository!
+
+⭐ If you found this repository useful, don't forget to Star it!
+
+Happy Coding! 🚀
