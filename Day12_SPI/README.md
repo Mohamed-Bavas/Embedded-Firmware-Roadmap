@@ -280,12 +280,7 @@ Day12_SPI/
 ├── spi_sensor_interface.c
 ├── spi_display_interface.c
 ├── SPI_Proteus.pdsprj
-├── README.md
-│
-└── Images/
-    ├── spi_connection.png
-    ├── proteus_spi.png
-    └── spi_output.png
+└──  README.md
 ```
 
 ---
