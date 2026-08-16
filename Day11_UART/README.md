@@ -279,11 +279,7 @@ Day11_UART/
 ├── uart_led_control.c
 ├── uart_menu_program.c
 ├── UART_Proteus.pdsprj
-├── README.md
-└── Images/
-    ├── uart_connection.png
-    ├── proteus_uart.png
-    └── virtual_terminal_output.png
+└── README.md
 ```
 
 ---
