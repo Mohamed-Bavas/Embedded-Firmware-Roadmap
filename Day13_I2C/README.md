@@ -288,12 +288,7 @@ Day13_I2C/
 ├── i2c_sensor_read.c
 ├── i2c_multi_slave_demo.c
 ├── I2C_Proteus.pdsprj
-├── README.md
-│
-└── Images/
-    ├── i2c_connection.png
-    ├── proteus_i2c.png
-    └── i2c_output.png
+└──  README.md
 ```
 
 ---
