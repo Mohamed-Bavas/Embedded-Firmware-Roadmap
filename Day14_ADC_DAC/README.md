@@ -262,15 +262,14 @@ Day14_ADC_DAC/
 │   ├── adc_to_uart_display.c
 │   └── adc_threshold_alert.c
 │
-├── DAC/
-│   ├── dac_initialize.c
-│   ├── dac_generate_ramp_wave.c
-│   ├── dac_generate_triangle_wave.c
-│   ├── dac_generate_sine_wave.c
-│   └── dac_variable_voltage_output.c
-│
-└── Notes/
-    └── ADC_DAC_Theory.md
+└── DAC/
+    ├── dac_initialize.c
+    ├── dac_generate_ramp_wave.c
+    ├── dac_generate_triangle_wave.c
+    ├── dac_generate_sine_wave.c
+    └── dac_variable_voltage_output.c
+
+
 ```
 
 ---
