@@ -264,5 +264,3 @@ One project at a time.
 
 **Happy Coding! 🚀**
 
-```
-```
