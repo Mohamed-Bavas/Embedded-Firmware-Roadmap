@@ -1,4 +1,4 @@
-````markdown
+
 # 🚀 Embedded Firmware Roadmap
 
 Welcome to my **Embedded Firmware Engineer Learning Journey**.
