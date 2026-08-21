@@ -2,9 +2,7 @@
 char UART_Rx()
 {
     while(RI==0);
-
     RI=0;
-
     return SBUF;
 }
 void UART_Init()

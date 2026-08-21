@@ -1,13 +1,10 @@
 #include <stdio.h>
-
 int main()
 {
     int a, b;
     char op;
-
     printf("Enter expression (Example: 10 + 5): ");
     scanf("%d %c %d", &a, &op, &b);
-
     switch (op)
     {
         case '+':

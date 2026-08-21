@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void counter()
 {
     static int count = 0;

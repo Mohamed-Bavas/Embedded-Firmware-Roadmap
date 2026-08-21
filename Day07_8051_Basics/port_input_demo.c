@@ -8,13 +8,11 @@ void main()
 {
     while(1)
     {  
-        
 			P1=0x00;
 			P2 = P1;	
 			delay();
 			P1=0xFF;
 			P2 = P1;	
 			delay(); 
-		
     }
 }

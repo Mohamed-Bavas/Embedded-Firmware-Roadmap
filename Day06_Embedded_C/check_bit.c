@@ -6,6 +6,5 @@ int main() {
         printf("Bit 3 is SET\n");
     else
         printf("Bit 3 is CLEAR");
-
     return 0;
 }

@@ -1,11 +1,9 @@
 #include <stdio.h>
-
 struct student {
     int id;
     char name[50];
     float marks;
 };
-
 int main() {
     struct student s1;
     printf("Enter Student ID: ");

@@ -49,8 +49,7 @@ void main(){
 		red=0;
 		yellow=0;
 		green=1;
-		countdown(3);
-		
+		countdown(3);	
 	}
 }
 	
