@@ -1,4 +1,3 @@
-
 # 🚀 Embedded Firmware Roadmap
 
 Welcome to my **Embedded Firmware Engineer Learning Journey**.
@@ -35,28 +34,28 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 
 # 📅 Learning Roadmap
 
-| Day | Topic | Status |
-| --- | --- | :---: |
-| Day 01 | C Programming Basics | ✅ |
-| Day 02 | Pointers, Arrays & Strings | ✅ |
-| Day 03 | Functions, Storage Classes & Memory | ✅ |
-| Day 04 | Structures, Unions & Enums | ✅ |
-| Day 05 | File Handling & Preprocessor | ✅ |
-| Day 06 | Bitwise Operators & Embedded C | ✅ |
-| Day 07 | 8051 Microcontroller Basics | ✅ |
-| Day 08 | GPIO Programming | ✅ |
-| Day 09 | Timers | ✅ |
-| Day 10 | Interrupts | ✅ |
-| Day 11 | UART | ✅ |
-| Day 12 | SPI | ✅ |
-| Day 13 | I2C | ✅ |
-| Day 14 | ADC & DAC | ✅ |
-| Day 15 | PWM | ✅ |
-| Day 16 | CAN Protocol | ⏳ |
-| Day 17 | Watchdog Timer | ⏳ |
-| Day 18 | Bootloader Basics | ⏳ |
-| Day 19 | RTOS Basics | ⏳ |
-| Day 20 | Mini Embedded Project | ⏳ |
+| Day    | Topic                               | Status |
+| ------ | ----------------------------------- | :----: |
+| Day 01 | C Programming Basics                |    ✅   |
+| Day 02 | Pointers, Arrays & Strings          |    ✅   |
+| Day 03 | Functions, Storage Classes & Memory |    ✅   |
+| Day 04 | Structures, Unions & Enums          |    ✅   |
+| Day 05 | File Handling & Preprocessor        |    ✅   |
+| Day 06 | Bitwise Operators & Embedded C      |    ✅   |
+| Day 07 | 8051 Microcontroller Basics         |    ✅   |
+| Day 08 | GPIO Programming                    |    ✅   |
+| Day 09 | Timers                              |    ✅   |
+| Day 10 | Interrupts                          |    ✅   |
+| Day 11 | UART                                |    ✅   |
+| Day 12 | SPI                                 |    ✅   |
+| Day 13 | I2C                                 |    ✅   |
+| Day 14 | ADC & DAC                           |    ✅   |
+| Day 15 | PWM                                 |    ✅   |
+| Day 16 | CAN Protocol                        |    ✅   |
+| Day 17 | Watchdog Timer                      |    ✅   |
+| Day 18 | Bootloader Basics                   |    ⏳   |
+| Day 19 | RTOS Basics                         |    ⏳   |
+| Day 20 | Mini Embedded Project               |    ⏳   |
 
 ---
 
@@ -92,7 +91,7 @@ Embedded-Firmware-Roadmap/
 ├── Mini_Projects/
 ├── Notes/
 └── Resources/
-````
+```
 
 ---
 
@@ -122,7 +121,6 @@ Embedded-Firmware-Roadmap/
 
 # 🎯 Current Progress
 
-* ✔️ Started my Embedded Firmware learning journey.
 * ✔️ Completed Day 01 – C Programming Basics.
 * ✔️ Completed Day 02 – Pointers, Arrays & Strings.
 * ✔️ Completed Day 03 – Functions, Storage Classes & Memory.
@@ -138,63 +136,22 @@ Embedded-Firmware-Roadmap/
 * ✔️ Completed Day 13 – I2C Communication.
 * ✔️ Completed Day 14 – ADC & DAC.
 * ✔️ Completed Day 15 – PWM.
-* 🔄 Next: **Day 16 – CAN Protocol**
+* ✔️ Completed Day 16 – CAN Protocol.
+* ✔️ Completed Day 17 – Watchdog Timer.
+* 🔄 Next: **Day 18 – Bootloader Basics**
 
 ---
 
 # 🏆 Progress Tracker
 
-**Completed:** **15 / 20 Days (75%)**
+**Completed:** **17 / 20 Days (85%)**
 
 ```text
-██████████████████████████████░░░░░░░░ 75%
+██████████████████████████████████░░░░ 85%
 ```
-
----
-
-# 🎚️ PWM (Day 15)
-
-## PWM Fundamentals
-
-* What is PWM (Pulse Width Modulation)?
-* Why PWM is Used in Embedded Systems
-* PWM Working Principle
-* PWM Period and Frequency
-* Duty Cycle
-* ON Time and OFF Time
-* PWM Signal Generation
-
-## PWM Applications
-
-* LED Brightness Control
-* DC Motor Speed Control
-* Fan Speed Control
-* Servo Control
-* Power Control
-
-## PWM Practice Programs
-
-* pwm_initialize.c
-* pwm_generate_signal.c
-* pwm_led_brightness_control.c
-* pwm_dc_motor_speed_control.c
-* pwm_fan_speed_control.c
-* pwm_potentiometer_controlled.c
-
-## Proteus Simulation
-
-* PWM Signal Generation
-* LED Brightness Control
-* DC Motor Speed Control
-* Fan Speed Control
-* Potentiometer-Controlled PWM
-
----
 
 # 🚀 Upcoming Topics
 
-* 🚌 CAN Protocol
-* 🛡️ Watchdog Timer
 * 🚀 Bootloader Basics
 * ⚡ RTOS Basics
 * 🛠️ Mini Embedded Project
@@ -230,7 +187,7 @@ One project at a time.
 
 # 🎯 Current Milestone
 
-* ✅ **15 Days Completed**
+* ✅ **17 Days Completed**
 * 📚 **140+ C & Embedded C Programs**
 * 💻 **8051 Programming Completed**
 * 🔌 **GPIO Programming Completed**
@@ -241,7 +198,9 @@ One project at a time.
 * 🔗 **I2C Communication Completed**
 * 📈 **ADC & DAC Completed**
 * 🎚️ **PWM Completed**
-* 🚌 **Preparing for CAN Protocol**
+* 🚌 **CAN Protocol Completed**
+* 🛡️ **Watchdog Timer Completed**
+* 🚀 **Preparing for Bootloader Basics**
 
 ---
 
@@ -263,4 +222,3 @@ One project at a time.
 ⭐ **If you found this repository useful, don't forget to Star it!**
 
 **Happy Coding! 🚀**
-
