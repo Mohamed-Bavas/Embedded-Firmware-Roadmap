@@ -2,11 +2,11 @@
 
 Welcome to **Day 17** of my **Embedded Firmware Engineer Learning Journey**.
 
-Today, I learned about the **Watchdog Timer (WDT)**, an important hardware safety mechanism used in embedded systems to automatically recover a microcontroller when the firmware becomes **stuck, unresponsive, or enters an unexpected state**.
+Today, I learned **Watchdog Timer (WDT)**, an important reliability and fault-recovery mechanism used in embedded systems.
 
-A Watchdog Timer works like a countdown timer. The firmware must periodically **refresh, feed, or service** the watchdog before the timeout expires. If the firmware fails to refresh it within the required time, the watchdog can trigger a **system reset**.
+A Watchdog Timer continuously monitors firmware execution. The application must periodically refresh or feed the Watchdog before its timeout period expires. If the firmware becomes stuck, enters an infinite loop, crashes, or fails to refresh the Watchdog, the timer expires and can automatically reset the microcontroller.
 
-Watchdog timers are widely used in **automotive systems, industrial controllers, medical devices, IoT devices, robotics, and other unattended embedded systems** where reliable operation is important.
+Watchdog Timers are widely used in **automotive ECUs, industrial controllers, IoT devices, robotics, medical systems, and safety-critical embedded applications**.
 
 ---
 
@@ -15,470 +15,271 @@ Watchdog timers are widely used in **automotive systems, industrial controllers,
 ### 🔹 Watchdog Timer Fundamentals
 
 * What is a Watchdog Timer?
-* Why WDT is required in Embedded Systems
+* Why Watchdog Timer is required in Embedded Systems
 * Watchdog Timer working principle
-* Watchdog timeout period
-* Watchdog counter
-* Feeding / Kicking / Servicing the watchdog
-* Watchdog reset
-* Watchdog interrupt
-* Watchdog reset vs Power-On Reset
-
-### 🔹 Types of Watchdog Timers
-
-* Independent Watchdog (IWDG)
-* Window Watchdog (WWDG)
-* Hardware Watchdog
-* Software Watchdog
-* Timeout-based watchdog operation
+* Watchdog Counter
+* Watchdog Timeout
+* Watchdog Reset
+* Watchdog Refresh / Feed / Kick
+* Hardware Watchdog vs Software Watchdog
+* Applications of Watchdog Timer
 
 ### 🔹 Watchdog Timer Operation
 
-* Watchdog counter
-* Prescaler
-* Reload value
-* Timeout calculation
-* Refresh operation
-* Timeout condition
-* Automatic system reset
+* Watchdog Initialization
+* Watchdog Start
+* Watchdog Counter
+* Watchdog Refresh
+* Watchdog Timeout
+* Automatic System Reset
+* Firmware Recovery
 
----
-
-# 🛡️ What is a Watchdog Timer?
-
-A **Watchdog Timer (WDT)** is a timer designed to monitor the health of embedded firmware.
-
-The application periodically refreshes the watchdog:
+### 🔹 Watchdog Timer Flow
 
 ```text
+Initialize Watchdog
+        ↓
 Start Watchdog
-      ↓
+        ↓
 Run Application
-      ↓
-Refresh Watchdog
-      ↓
-Continue Running
-      ↓
-Refresh Watchdog
-      ↓
-Continue Running
+        ↓
+Feed / Refresh WDT
+        ↓
+Continue Application
+        ↓
+       ┌───────────────┐
+       │               │
+ Firmware OK      Firmware Hang
+       │               │
+       ↓               ↓
+ Refresh WDT      No Refresh
+                       ↓
+                 WDT Timeout
+                       ↓
+                  MCU Reset
+                       ↓
+                Firmware Restart
 ```
-
-If the firmware gets stuck:
-
-```text
-Start Watchdog
-      ↓
-Run Application
-      ↓
-Firmware Hangs
-      ↓
-No Watchdog Refresh
-      ↓
-Timeout
-      ↓
-System Reset
-      ↓
-Firmware Restarts
-```
-
-The main purpose of a watchdog is:
-
-> **Automatically recover the system when software stops operating correctly.**
 
 ---
 
 # ⚙️ Watchdog Timer Working Principle
 
-A watchdog contains a counter that continuously counts toward a timeout condition.
+A Watchdog Timer contains a counter that runs continuously using its configured clock source.
 
-The firmware must periodically reload or refresh the counter.
+The firmware must periodically refresh the Watchdog before the counter reaches its timeout value.
 
-### Healthy System
+### Normal Operation
 
 ```text
-Watchdog Counter
-      ↓
-Count
-      ↓
-Refresh
-      ↓
-Counter Restart
-      ↓
-Count
-      ↓
-Refresh
-      ↓
-Continue
+Start WDT
+   ↓
+Execute Firmware
+   ↓
+Feed WDT
+   ↓
+Execute Firmware
+   ↓
+Feed WDT
+   ↓
+Continue Execution
 ```
 
-### Faulty System
+### Fault Condition
 
 ```text
-Watchdog Counter
-      ↓
-Count
-      ↓
-Firmware Hang
-      ↓
-No Refresh
-      ↓
+Firmware Running
+       ↓
+Firmware Gets Stuck
+       ↓
+No WDT Feed
+       ↓
+Counter Continues
+       ↓
 Timeout
-      ↓
-MCU Reset
+       ↓
+Watchdog Reset
+       ↓
+System Restart
 ```
 
 ---
 
-# 🔄 Watchdog Feeding / Refreshing
+# 🔄 Watchdog Feed / Refresh
 
-The process of resetting the watchdog counter is commonly called:
+**Watchdog Feed**, **Refresh**, or **Kick** means resetting the Watchdog counter before the timeout occurs.
 
-* Feeding the watchdog
-* Kicking the watchdog
-* Servicing the watchdog
-* Refreshing the watchdog
+The firmware should perform this operation periodically when the monitored system is operating correctly.
 
-Example:
-
-```c
-Watchdog_Refresh();
+```text
+Application Task
+       ↓
+Check System Status
+       ↓
+Feed Watchdog
+       ↓
+Continue Execution
 ```
 
-The refresh operation tells the watchdog:
-
-> "The firmware is still operating correctly."
+A Watchdog should not simply be refreshed blindly. In a robust firmware design, the Watchdog should only be fed when the required system tasks are operating correctly.
 
 ---
 
 # ⏱️ Watchdog Timeout
 
-The watchdog timeout determines how long the firmware can run without refreshing the watchdog.
-
-For example:
+The **Watchdog Timeout** is the amount of time available for the firmware to refresh the Watchdog before a reset is generated.
 
 ```text
-Watchdog Timeout = 1 second
+Watchdog Started
+       ↓
+Counter Running
+       ↓
+Refresh WDT
+       ↓
+Counter Reset
+       ↓
+Counter Running Again
 ```
 
-If the firmware does not refresh the watchdog within that period:
+If the firmware stops refreshing:
 
 ```text
-1 second elapsed
-      ↓
-Watchdog Timeout
-      ↓
-MCU Reset
+No Refresh
+    ↓
+Counter Continues
+    ↓
+Timeout Reached
+    ↓
+Watchdog Reset
 ```
 
-The timeout should be selected carefully.
-
-### Timeout Too Short
-
-```text
-False Watchdog Reset
-```
-
-The system may reset even though the firmware is operating normally.
-
-### Timeout Too Long
-
-```text
-Slow Fault Recovery
-```
-
-The system may remain stuck for too long before recovery.
+The actual timeout depends on the Watchdog clock source, prescaler, reload/counter value, and microcontroller architecture.
 
 ---
 
-# 🧮 Watchdog Timeout Configuration
+# 🔧 Watchdog Timer Configuration
 
-The watchdog timeout is generally determined by factors such as:
+Typical Watchdog configuration includes:
 
-* Clock frequency
+* Watchdog clock source
 * Prescaler
-* Counter/reload value
-
-A simplified relationship is:
-
-```text
-Timeout ≈ Counter Period × Prescaler
-```
-
-The exact formula depends on the specific microcontroller and watchdog peripheral.
+* Counter / reload value
+* Timeout period
+* Watchdog enable
+* Watchdog start
+* Watchdog refresh
+* Reset configuration
 
 ---
 
-# 🔐 Types of Watchdog Timers
+# 🔌 Watchdog Timer in STM32
 
-## 1. Independent Watchdog (IWDG)
-
-An **Independent Watchdog** normally uses a clock source that is independent of the main system clock.
-
-In many STM32 devices, the IWDG is clocked from the internal **LSI oscillator**.
-
-```text
-LSI Clock
-    ↓
-IWDG
-    ↓
-Counter
-    ↓
-Timeout
-    ↓
-System Reset
-```
-
-### Advantages
-
-* Independent from the main CPU clock
-* Useful for recovering from clock or software problems
-* Simple timeout-based supervision
-* Suitable for reliable fault recovery
-
----
-
-# 🪟 2. Window Watchdog (WWDG)
-
-A **Window Watchdog** requires the watchdog to be refreshed within a specific time window.
-
-The firmware must not refresh:
-
-* Too early
-* Too late
-
-```text
-       Valid Refresh Window
-              ↓
-     ┌──────────────────┐
-─────┤                  ├─────
-Early      Refresh      Late
-Reset       OK          Reset
-```
-
-This helps detect software that is running incorrectly even if it is still periodically executing.
-
----
-
-# ⚖️ IWDG vs WWDG
-
-| Feature                 | IWDG                            | WWDG                             |
-| ----------------------- | ------------------------------- | -------------------------------- |
-| Full Name               | Independent Watchdog            | Window Watchdog                  |
-| Clock                   | Independent clock source        | Peripheral/system clock domain   |
-| Refresh                 | Before timeout                  | Within allowed window            |
-| Early Refresh Detection | Generally No                    | Yes                              |
-| Late Refresh Detection  | Yes                             | Yes                              |
-| Main Purpose            | Recovery from software failures | Detect abnormal execution timing |
-| Typical STM32 Use       | Reliable system recovery        | More precise software monitoring |
-
----
-
-# 🔌 Watchdog Timer in 8051
-
-The watchdog implementation depends on the particular **8051 derivative**.
-
-Many classic 8051 variants do not provide a dedicated watchdog peripheral.
-
-For such devices, watchdog-like behavior can be implemented using:
-
-* Timer 0
-* Timer 1
-* Timer interrupts
-* Software timeout monitoring
-
-Example concept:
-
-```text
-Timer
-  ↓
-Periodic Interrupt
-  ↓
-Check System Activity
-  ↓
-System Healthy?
-  ├── Yes → Continue
-  └── No  → Reset System
-```
-
-However, many modern 8051-compatible microcontrollers include a **dedicated hardware watchdog**, so the specific datasheet should always be checked.
-
----
-
-# 🔧 Watchdog Timer in STM32
-
-STM32 microcontrollers commonly provide watchdog peripherals such as:
+STM32 microcontrollers commonly provide two Watchdog peripherals:
 
 * **IWDG – Independent Watchdog**
 * **WWDG – Window Watchdog**
 
-The exact availability and implementation depend on the STM32 family.
+```text
+                 STM32
+                   │
+          ┌────────┴────────┐
+          │                 │
+        IWDG              WWDG
+          │                 │
+ Independent Clock      Window Timing
+          │                 │
+          └────────┬────────┘
+                   ↓
+             Fault Recovery
+```
 
 ---
 
-## STM32 IWDG
+## 🔹 IWDG – Independent Watchdog
 
-Important IWDG registers commonly include:
+The **Independent Watchdog (IWDG)** is designed for reliable system monitoring and uses an independent clock source.
+
+### Important Concepts
+
+* Independent clock
+* Prescaler
+* Reload value
+* Watchdog start
+* Counter refresh
+* Timeout
+* Automatic reset
+
+The IWDG is particularly useful when robust recovery from firmware failures is required.
+
+---
+
+## 🔹 WWDG – Window Watchdog
+
+The **Window Watchdog (WWDG)** requires the Watchdog to be refreshed within a specific timing window.
+
+Refreshing outside the allowed window can result in a reset.
 
 ```text
-IWDG->KR
-IWDG->PR
-IWDG->RLR
-IWDG->SR
+Invalid        Valid Refresh Window        Invalid
+   │                    │                     │
+───┼────────────────────┼─────────────────────┼───
+                        ↑
+                     Refresh
 ```
 
-### Key Registers
+### Important Concepts
 
-| Register    | Purpose                                     |
-| ----------- | ------------------------------------------- |
-| `IWDG->KR`  | Key register / watchdog control and refresh |
-| `IWDG->PR`  | Prescaler configuration                     |
-| `IWDG->RLR` | Reload value                                |
-| `IWDG->SR`  | Status information                          |
-
-Typical HAL functions include:
-
-```c
-HAL_IWDG_Init();
-HAL_IWDG_Refresh();
-```
+* Prescaler
+* Counter
+* Window value
+* Refresh timing
+* Early refresh detection
+* Late refresh detection
+* Watchdog reset
 
 ---
 
-# 🪟 STM32 WWDG
+# 🔍 Watchdog Reset Cause Detection
 
-The Window Watchdog can be configured using STM32 HAL functions such as:
-
-```c
-HAL_WWDG_Init();
-HAL_WWDG_Refresh();
-```
-
-The WWDG monitors whether the firmware refreshes the watchdog within the configured timing window.
-
----
-
-# 🔁 Watchdog Reset Sequence
-
-A typical watchdog recovery sequence is:
+After a system reset, firmware can check reset-status flags to determine whether the previous reset was caused by the Watchdog.
 
 ```text
-Firmware Starts
+System Reset
       ↓
-Initialize WDT
+Check Reset Cause
       ↓
-Run Main Application
-      ↓
-Refresh WDT
-      ↓
-Application Continues
-      ↓
-Firmware Failure
-      ↓
-No Refresh
-      ↓
-WDT Timeout
-      ↓
-MCU Reset
-      ↓
-Firmware Starts Again
+┌─────┴─────┐
+│           │
+WDT Reset   Other Reset
+│           │
+↓           ↓
+Analyze     Analyze
+Failure     Reset Source
 ```
 
----
-
-# 🔍 Watchdog Reset vs Power-On Reset
-
-Embedded systems often need to determine **why the MCU restarted**.
-
-Possible reset causes include:
-
-* Power-On Reset
-* External Reset
-* Software Reset
-* Watchdog Reset
-* Brownout Reset
-
-The microcontroller usually provides reset-status information through dedicated registers.
-
-The firmware can use this information for:
+This is useful for:
 
 * Debugging
-* Fault diagnosis
-* Event logging
+* Fault analysis
+* System diagnostics
+* Failure logging
 * Reliability monitoring
-
----
-
-# 🧠 Watchdog Design Considerations
-
-A watchdog should not simply be refreshed blindly.
-
-### 1. Choose the Correct Timeout
-
-The timeout should be:
-
-```text
-Long enough → Avoid false resets
-Short enough → Recover quickly from faults
-```
-
-### 2. Refresh at the Correct Location
-
-A common approach is to refresh the watchdog only after important parts of the system have successfully executed.
-
-```text
-Task A
- ↓
-Task B
- ↓
-Task C
- ↓
-System Healthy
- ↓
-Refresh Watchdog
-```
-
-### 3. Avoid Blind ISR Refreshing
-
-Refreshing the watchdog inside an interrupt that continues running even when the main application is stuck can hide software failures.
-
-Bad design:
-
-```text
-Timer ISR
-   ↓
-Refresh WDT
-   ↓
-Main Application Hangs
-   ↓
-WDT Never Resets
-```
-
-Better approach:
-
-```text
-Main Application
-      ↓
-Check System Health
-      ↓
-Refresh WDT
-```
 
 ---
 
 # 💻 Practice Programs
 
-## Watchdog Timer Programs
+The following programs were practiced during **Day 17**:
 
-| #  | Program                          | Description                                   |
-| -- | -------------------------------- | --------------------------------------------- |
-| 01 | `wdt_initialize.c`               | Initializes the watchdog timer                |
-| 02 | `wdt_feed_basic.c`               | Demonstrates periodic watchdog refresh        |
-| 03 | `wdt_timeout_reset_demo.c`       | Demonstrates automatic reset after timeout    |
-| 04 | `wdt_stm32_iwdg_config.c`        | Configures STM32 Independent Watchdog         |
-| 05 | `wdt_stm32_wwdg_config.c`        | Configures STM32 Window Watchdog              |
-| 06 | `wdt_reset_cause_detection.c`    | Detects watchdog and other reset causes       |
-| 07 | `wdt_hang_recovery_simulation.c` | Simulates firmware hang and watchdog recovery |
+| #  | Program                          | Description                                          |
+| -- | -------------------------------- | ---------------------------------------------------- |
+| 01 | `wdt_initialize.c`               | Initializes and configures the Watchdog Timer        |
+| 02 | `wdt_feed_basic.c`               | Demonstrates basic Watchdog feed / refresh operation |
+| 03 | `wdt_timeout_reset_demo.c`       | Demonstrates Watchdog timeout and automatic reset    |
+| 04 | `wdt_stm32_iwdg_config.c`        | Configures the STM32 Independent Watchdog (IWDG)     |
+| 05 | `wdt_stm32_wwdg_config.c`        | Configures the STM32 Window Watchdog (WWDG)          |
+| 06 | `wdt_reset_cause_detection.c`    | Detects and identifies Watchdog reset cause          |
+| 07 | `wdt_hang_recovery_simulation.c` | Simulates firmware hang and Watchdog-based recovery  |
 
 ---
 
@@ -488,76 +289,14 @@ Refresh WDT
 Day17_Watchdog/
 │
 ├── README.md
+│
 ├── wdt_initialize.c
 ├── wdt_feed_basic.c
 ├── wdt_timeout_reset_demo.c
 ├── wdt_stm32_iwdg_config.c
 ├── wdt_stm32_wwdg_config.c
 ├── wdt_reset_cause_detection.c
-├── wdt_hang_recovery_simulation.c
-└── Proteus_Simulations/
-```
-
----
-
-# 🧪 Proteus Simulation Ideas
-
-### Watchdog Timeout Demonstration
-
-```text
-MCU
- ↓
-Start WDT
- ↓
-Normal Operation
- ↓
-No Refresh
- ↓
-Timeout
- ↓
-MCU Reset
-```
-
-### Healthy Main Loop
-
-```text
-Main Loop
-   ↓
-Execute Tasks
-   ↓
-Check System Health
-   ↓
-Refresh WDT
-   ↓
-Repeat
-```
-
-### Firmware Hang Simulation
-
-```text
-Normal Operation
-      ↓
-Firmware Hang
-      ↓
-Infinite Loop
-      ↓
-No WDT Refresh
-      ↓
-Watchdog Timeout
-      ↓
-MCU Reset
-```
-
-### Reset Cause Indicator
-
-```text
-MCU Reset
-    ↓
-Check Reset Status
-    ↓
-┌───────────────┐
-│ Watchdog Reset│ → LED Indicator
-└───────────────┘
+└── wdt_hang_recovery_simulation.c
 ```
 
 ---
@@ -566,45 +305,30 @@ Check Reset Status
 
 ### Watchdog Timer Applications
 
-* 🚗 Automotive ECUs
-* 🏭 Industrial Controllers
+* 🚗 Automotive ECU Systems
+* 🏭 Industrial Automation
 * 🤖 Robotics
-* 🏥 Medical Devices
 * 📡 IoT Devices
-* 🔋 Battery Management Systems
+* 🏥 Medical Equipment
+* ⚙️ Motor Controllers
+* 🚀 Aerospace Systems
+* 🔌 Embedded Control Systems
 * 🛡️ Safety-Critical Systems
-* 🏢 Building Automation
-* 🚜 Agricultural Machinery
-* ⚙️ Industrial Embedded Systems
+* 🏠 Consumer Electronics
 
 ---
 
-# ⚖️ Watchdog Timer vs Normal Timer
+# ⚖️ IWDG vs WWDG
 
-| Feature              | Watchdog Timer          | Normal Timer                    |
-| -------------------- | ----------------------- | ------------------------------- |
-| Main Purpose         | Fault recovery          | Timing/events                   |
-| Timeout Action       | Usually reset/interrupt | Interrupt/event                 |
-| Firmware Monitoring  | Yes                     | Not necessarily                 |
-| Used for Reliability | High                    | General purpose                 |
-| Typical Application  | System recovery         | Delays, scheduling, measurement |
-
----
-
-# 🧠 Important Watchdog Terms
-
-| Term           | Meaning                                     |
-| -------------- | ------------------------------------------- |
-| WDT            | Watchdog Timer                              |
-| IWDG           | Independent Watchdog                        |
-| WWDG           | Window Watchdog                             |
-| Timeout        | Maximum allowed time before watchdog action |
-| Refresh        | Reloads/resets watchdog counter             |
-| Feed           | Another term for refreshing watchdog        |
-| Prescaler      | Divides watchdog clock                      |
-| Reload Value   | Counter value used for timeout              |
-| Reset Cause    | Reason why the MCU restarted                |
-| Fault Recovery | Automatic recovery from firmware failure    |
+| Feature                 | IWDG                     | WWDG                     |
+| ----------------------- | ------------------------ | ------------------------ |
+| Full Name               | Independent Watchdog     | Window Watchdog          |
+| Clock                   | Independent clock source | Peripheral/system clock  |
+| Refresh                 | Before timeout           | Within valid window      |
+| Early Refresh Detection | No                       | Yes                      |
+| Late Refresh Detection  | Yes                      | Yes                      |
+| Main Purpose            | Robust fault recovery    | Timing-window monitoring |
+| STM32 Availability      | Common                   | Common                   |
 
 ---
 
@@ -612,20 +336,16 @@ Check Reset Status
 
 During Day 17, I practiced:
 
-* Understanding Watchdog Timer fundamentals
-* Learning why watchdog timers are important
-* Understanding watchdog timeout operation
-* Learning watchdog feeding and refreshing
-* Understanding IWDG and WWDG
-* Understanding watchdog prescaler and reload concepts
-* Learning watchdog reset behavior
-* Understanding watchdog reset cause detection
-* Studying watchdog implementation on 8051-based systems
-* Understanding STM32 IWDG
-* Understanding STM32 WWDG
-* Learning proper watchdog refresh strategies
-* Understanding firmware hang recovery
-* Exploring Watchdog Timer simulation concepts
+* Initializing the Watchdog Timer
+* Starting and configuring the WDT
+* Feeding / refreshing the Watchdog
+* Understanding Watchdog timeout
+* Demonstrating automatic system reset
+* Configuring STM32 IWDG
+* Configuring STM32 WWDG
+* Detecting Watchdog reset causes
+* Simulating firmware hang conditions
+* Understanding automatic firmware recovery
 
 ---
 
@@ -633,16 +353,13 @@ During Day 17, I practiced:
 
 * [x] Watchdog Timer Fundamentals
 * [x] Watchdog Working Principle
-* [x] Watchdog Timeout Concepts
-* [x] Feeding / Refreshing the Watchdog
-* [x] Independent Watchdog (IWDG)
-* [x] Window Watchdog (WWDG)
+* [x] Watchdog Initialization
+* [x] Watchdog Feed / Refresh
+* [x] Watchdog Timeout
 * [x] Watchdog Reset
-* [x] Reset Cause Detection
-* [x] 8051 Watchdog Concepts
-* [x] STM32 IWDG Concepts
-* [x] STM32 WWDG Concepts
-* [x] Watchdog Design Considerations
+* [x] STM32 IWDG Configuration
+* [x] STM32 WWDG Configuration
+* [x] Watchdog Reset Cause Detection
 * [x] Firmware Hang Recovery
 * [x] Watchdog Practice Programs – 7/7
 
@@ -650,14 +367,15 @@ During Day 17, I practiced:
 
 # 🏆 Day 17 Milestone
 
-* 📚 **Watchdog Timer Fundamentals Completed**
-* 🛡️ **Firmware Fault Recovery Understood**
-* ⏱️ **Watchdog Timeout & Refresh Concepts Learned**
-* 🔄 **IWDG & WWDG Concepts Understood**
-* 🔧 **STM32 Watchdog Configuration Studied**
-* 💻 **8051 Watchdog Implementation Concepts Learned**
-* 🔍 **Reset Cause Detection Understood**
-* 🧪 **Watchdog Recovery Simulation Practiced**
+* 🛡️ **Watchdog Timer Fundamentals Completed**
+* ⚙️ **WDT Initialization Implemented**
+* 🔄 **Watchdog Feed / Refresh Implemented**
+* ⏱️ **Watchdog Timeout & Reset Demonstrated**
+* 🔧 **STM32 IWDG Configuration Practiced**
+* 🔧 **STM32 WWDG Configuration Practiced**
+* 🔍 **Watchdog Reset Cause Detection Practiced**
+* 🛠️ **Firmware Hang Recovery Simulation Practiced**
+* 💻 **7 Watchdog Timer Programs Added**
 
 ---
 
@@ -665,15 +383,13 @@ During Day 17, I practiced:
 
 **Day 17 – Watchdog Timer Completed ✔️**
 
-Today I strengthened my understanding of how **Watchdog Timers improve embedded system reliability** by automatically recovering the microcontroller when firmware becomes stuck or unresponsive.
+Today I strengthened my understanding of how Watchdog Timers improve **firmware reliability, system stability, and automatic fault recovery**.
 
-I learned how watchdog timers monitor software execution, how the firmware periodically refreshes the watchdog, and how a timeout can trigger an automatic system reset.
-
-I also learned the difference between **Independent Watchdog (IWDG)** and **Window Watchdog (WWDG)** and how watchdog mechanisms are implemented in embedded platforms such as **8051 and STM32**.
+I also practiced both **basic Watchdog concepts and STM32-specific IWDG/WWDG configuration**, along with reset-cause detection and firmware hang recovery.
 
 ### Next Topic
 
-**Day 18 – RTOS Fundamentals ⚙️**
+**Day 18 – Bootloader Basics**
 
 > *Consistency beats intensity. Keep learning, keep building, and keep improving.* 🚀
 
