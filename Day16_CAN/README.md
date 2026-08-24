@@ -470,9 +470,7 @@ Day16_CAN/
 ├── can_receive_message.c
 ├── can_filter_setup.c
 ├── can_error_handling.c
-├── can_two_node_communication.c
-├── can_led_control.c
-└── can_sensor_data_transmission.c
+└── can_two_node_communication.c
 ```
 
 ---
