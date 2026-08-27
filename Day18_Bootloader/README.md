@@ -809,6 +809,3 @@ This gives me a strong foundation for moving from **8051 bootloader concepts to 
 ---
 
 ⭐ Part of my **Embedded Firmware Engineer Learning Journey** and **Embedded Firmware Roadmap**.
-
-```
-```
