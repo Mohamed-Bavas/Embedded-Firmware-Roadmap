@@ -1,63 +1,137 @@
 
 # 🚀 Day 18 – Bootloader Basics
 
-Part of the **Embedded Firmware Engineer Learning Journey**.
+Welcome to **Day 18** of my **Embedded Firmware Engineer Learning Journey**.
 
-Today, I learned the **fundamentals of Bootloader Development** and implemented basic bootloader-related programs using the **AT89C51 (8051) microcontroller**.
+Today, I learned the fundamentals of **Bootloader Development** and practiced the basic concepts using **C programming and AT89C51 (8051) microcontroller concepts**.
 
-The practice programs cover **Flash Erase, Flash Write, CRC Validation, Application Jump, UART Command Processing, Bootloader Simulation, and AT89C51 Configuration**.
+A bootloader is a small firmware program that runs before the main application and is responsible for preparing the system, validating firmware, handling firmware updates, and transferring control to the application.
 
-> **Note:** AT89C51 does not support runtime Flash programming and vector-table relocation in the same way as modern MCUs such as STM32. Therefore, some programs simulate these concepts using C so that the bootloader control flow can be understood before moving to a modern MCU.
+This Day 18 practice focuses on **Flash Erase, Flash Write, CRC Validation, Application Jump, UART Command Processing, Bootloader Simulation, and AT89C51 Configuration**.
 
----
-
-## 🎯 Objectives
-
-- Understand the purpose of a bootloader
-- Understand bootloader and application concepts
-- Practice Flash erase and write operations
-- Understand firmware integrity using CRC
-- Practice application jump concepts
-- Implement a basic UART bootloader protocol
-- Simulate a complete bootloader flow
-- Configure UART and GPIO on AT89C51
-- Understand firmware validation and safety checks
+> ⚠️ **Note:** AT89C51 does not provide the same runtime Flash programming controller or vector-table relocation mechanism available in modern MCUs such as STM32. Therefore, Flash operations and some bootloader behaviors are demonstrated using software simulation and C concepts.
 
 ---
 
-# 📚 Topics Covered
+## 📚 Topics Covered
 
-## 1. Bootloader Fundamentals
+### 🔹 Bootloader Fundamentals
 
-A **bootloader** is a small firmware program that executes before the main application.
+* What is a Bootloader?
+* Why Bootloaders are used in Embedded Systems
+* Bootloader and Application concepts
+* Bootloader execution flow
+* Firmware update process
+* Application validation
+* Application jump concept
 
-The basic responsibility of a bootloader is:
+### 🔹 Flash Memory Operations
+
+* Flash memory concept
+* Flash erase operation
+* Flash write operation
+* Erased Flash state (`0xFF`)
+* Application memory region
+* Memory address validation
+* Firmware programming concept
+
+### 🔹 Firmware Validation
+
+* CRC concept
+* CRC32 calculation
+* Firmware integrity checking
+* Corrupted firmware detection
+* Valid and invalid firmware handling
+
+### 🔹 Application Jump
+
+* Application entry point
+* Function pointers
+* Bootloader-to-application transition
+* Vector table concept
+* Application execution
+
+### 🔹 UART Bootloader
+
+* UART initialization
+* UART transmit
+* UART receive
+* Bootloader commands
+* Command processing
+* ACK/response concept
+* UART-based firmware update concept
+
+### 🔹 AT89C51 Configuration
+
+* AT89C51 GPIO configuration
+* UART configuration
+* Timer 1 Mode 2
+* 9600 baud UART configuration
+* Bootloader initialization
+
+---
+
+# 🔄 Bootloader Architecture
+
+A basic bootloader system works like this:
 
 ```text
-MCU Reset
-    ↓
-Bootloader
-    ↓
-Check Application
-    ↓
-Validate Firmware
-    ↓
-Jump to Application
+              MCU RESET
+                  |
+                  ▼
+          +---------------+
+          |  Bootloader   |
+          +---------------+
+                  |
+                  ▼
+          Check Application
+                  |
+          +-------+-------+
+          |               |
+        VALID           INVALID
+          |               |
+          ▼               ▼
+    Jump to App      Stay in
+                     Bootloader
 ````
 
-If a firmware update is required, the bootloader can receive a new firmware image, erase the application area, program the new firmware, verify it, and then start the application.
+If a firmware update is requested:
+
+```text
+Bootloader
+     |
+     ▼
+Receive Firmware
+     |
+     ▼
+Erase Application
+     |
+     ▼
+Write Firmware
+     |
+     ▼
+Calculate CRC
+     |
+     ▼
+Verify Firmware
+     |
+     ▼
+Jump to Application
+```
 
 ---
 
-# 💾 2. Flash Erase Operation
+# 💾 Flash Erase Operation
 
 ### Program
 
-`bootloader_flash_erase.c`
+```text
+bootloader_flash_erase.c
+```
 
 This program demonstrates the concept of erasing Flash memory.
 
-A simulated Flash memory is created using an array:
+For simulation, Flash memory is represented using an array:
 
 ```c
 #define FLASH_SIZE 1024
@@ -65,7 +139,7 @@ A simulated Flash memory is created using an array:
 unsigned char flash_memory[FLASH_SIZE];
 ```
 
-The erase operation sets every byte to `0xFF`.
+The erase operation sets every Flash byte to `0xFF`.
 
 ```c
 void Flash_Erase(void)
@@ -79,19 +153,17 @@ void Flash_Erase(void)
 }
 ```
 
-### Concept
+### Flash Erase Concept
 
 ```text
 Before Erase
 
-Flash:
 AA 12 45 67 89 10 ...
 
-        ↓ ERASE
+        ↓
+      ERASE
+        ↓
 
-After Erase
-
-Flash:
 FF FF FF FF FF FF ...
 ```
 
@@ -104,13 +176,15 @@ FF FF FF FF FF FF ...
 
 ---
 
-# ✍️ 3. Flash Write Operation
+# ✍️ Flash Write Operation
 
 ### Program
 
-`bootloader_flash_write.c`
+```text
+bootloader_flash_write.c
+```
 
-This program demonstrates writing firmware data into a simulated Flash memory array.
+This program demonstrates writing firmware data into a simulated Flash memory.
 
 ```c
 void Flash_Write(unsigned int address,
@@ -123,7 +197,7 @@ void Flash_Write(unsigned int address,
 }
 ```
 
-Example:
+Example firmware data:
 
 ```c
 Flash_Write(0, 0x55);
@@ -131,32 +205,51 @@ Flash_Write(1, 0xAA);
 Flash_Write(2, 0x12);
 ```
 
-The data is stored at the specified addresses.
+The data is stored at the specified Flash addresses.
+
+### Write Flow
+
+```text
+Firmware Data
+     |
+     ▼
+Address Check
+     |
+     ▼
+Flash Write
+     |
+     ▼
+Stored Firmware
+```
 
 ### Learning
 
 * Flash programming concept
-* Address checking
+* Address validation
 * Firmware data storage
-* Memory boundaries
+* Memory boundary checking
 
 ---
 
-# 🔐 4. CRC-Based Firmware Validation
+# 🔐 CRC-Based Firmware Validation
 
 ### Program
 
-`bootloader_crc_validate.c`
+```text
+bootloader_crc_validate.c
+```
 
-CRC is used to detect errors or corruption in firmware data.
+CRC is used to detect corruption in firmware data.
 
-The program calculates a CRC32 value for the firmware image.
+The program calculates a **CRC32** value for the firmware image.
 
 ```text
 Firmware Image
-      ↓
+      |
+      ▼
    CRC32
-      ↓
+      |
+      ▼
  CRC Value
 ```
 
@@ -164,72 +257,82 @@ During verification:
 
 ```text
 Expected CRC
-     ↓
-   Compare
-     ↑
+      |
+      | Compare
+      ▼
 Calculated CRC
 ```
 
-If both values are equal:
+### Valid Firmware
 
 ```text
-CRC MATCH
-   ↓
-Firmware Valid
+Expected CRC == Calculated CRC
+              |
+              ▼
+        Firmware Valid
 ```
 
-If they are different:
+### Corrupted Firmware
 
 ```text
-CRC MISMATCH
-   ↓
-Firmware Invalid
+Expected CRC != Calculated CRC
+              |
+              ▼
+       Firmware Invalid
 ```
 
 ### Learning
 
-* CRC32
+* CRC32 calculation
 * Firmware integrity
 * Data corruption detection
 * Firmware validation
 
-> CRC detects accidental corruption, but CRC alone is not a security mechanism. Secure bootloaders normally use cryptographic authentication/signatures when firmware authenticity matters.
+> CRC is useful for detecting accidental corruption, but it is not a cryptographic security mechanism. Secure bootloaders require authentication/signatures when firmware authenticity must be guaranteed.
 
 ---
 
-# 🚀 5. Application Jump
+# 🚀 Application Jump
 
 ### Program
 
-`bootloader_vector_relocate.c`
+```text
+bootloader_vector_relocate.c
+```
 
-This program demonstrates the basic concept of transferring control from the bootloader to an application.
+This program demonstrates transferring control from the bootloader to the application.
 
-The program uses a function pointer:
+A function pointer is used to represent the application entry point:
 
 ```c
 typedef void (*ApplicationFunction)(void);
 ```
 
-The bootloader calls the application entry function.
+The bootloader then calls the application function.
+
+### Application Jump Flow
 
 ```text
 Bootloader
-    ↓
+     |
+     ▼
 Validate Application
-    ↓
-Application Entry
-    ↓
+     |
+     ▼
+Application Entry Point
+     |
+     ▼
 Jump
-    ↓
+     |
+     ▼
 Application
 ```
 
-### Important Note
+### Important AT89C51 Note
 
 AT89C51 does **not** have the STM32 `SCB->VTOR` register.
 
-Therefore, this program demonstrates the **application jump concept** using a function pointer rather than performing actual STM32-style vector-table relocation.
+Therefore, this practice program demonstrates the **application jump concept** using a function pointer rather than performing actual STM32-style vector-table relocation.
 
 ### Learning
 
@@ -237,18 +340,21 @@ Therefore, this program demonstrates the **application jump concept** using a fu
 * Application entry point
 * Bootloader-to-application transition
 * Vector-table concept
+* Application execution
 
 ---
 
-# 📡 6. UART Bootloader Protocol
+# 📡 UART Bootloader Protocol
 
 ### Program
 
-`bootloader_uart_protocol.c`
+```text
+bootloader_uart_protocol.c
+```
 
-UART can be used as a communication interface between a PC and the bootloader.
+UART can be used as a simple communication interface between a PC and the bootloader.
 
-AT89C51 UART configuration:
+The AT89C51 UART is initialized using:
 
 ```c
 TMOD = 0x20;
@@ -257,31 +363,42 @@ SCON = 0x50;
 TR1 = 1;
 ```
 
-The program supports basic bootloader commands.
+For a typical **11.0592 MHz crystal**, this configuration is commonly used for **9600 baud communication**.
 
-| Command |  Value | Purpose             |
-| ------- | -----: | ------------------- |
+---
+
+## UART Bootloader Commands
+
+| Command | Value  | Purpose             |
+| ------- | ------ | ------------------- |
 | ERASE   | `0x01` | Erase application   |
 | WRITE   | `0x02` | Write firmware      |
 | VERIFY  | `0x03` | Verify firmware     |
 | JUMP    | `0x04` | Jump to application |
 
-Basic communication flow:
+### UART Communication Flow
 
 ```text
-PC
- |
- | UART Command
- ↓
-AT89C51 Bootloader
- |
- +---- ERASE
- |
- +---- WRITE
- |
- +---- VERIFY
- |
- +---- JUMP
+              PC
+               |
+               | UART Command
+               ▼
+        +---------------+
+        | AT89C51       |
+        | Bootloader    |
+        +---------------+
+               |
+       +-------+-------+
+       |       |       |
+     ERASE   WRITE   VERIFY
+       |       |       |
+       +-------+-------+
+               |
+               ▼
+             JUMP
+               |
+               ▼
+         Application
 ```
 
 ### Learning
@@ -290,96 +407,129 @@ AT89C51 Bootloader
 * UART transmit
 * UART receive
 * Command processing
+* UART protocol
 * Bootloader communication
-* Command-response protocol
 
 ---
 
-# 🧪 7. Bootloader Simulation
+# 🧪 Complete Bootloader Simulation
 
 ### Program
 
-`bootloader_sim.c`
+```text
+bootloader_sim.c
+```
 
-This program simulates the complete bootloader process on a PC.
+This program demonstrates the complete bootloader flow using normal C programming.
 
-The simulation demonstrates:
+The simulation performs:
 
 ```text
 Bootloader Start
-       ↓
+       |
+       ▼
 Flash Erase
-       ↓
+       |
+       ▼
 Flash Write
-       ↓
-CRC Validation
-       ↓
+       |
+       ▼
+CRC Verification
+       |
+       ▼
 Application Valid?
      /       \
    YES        NO
     |          |
-    ↓          ↓
+    ▼          ▼
   Jump       Reject
     |
-    ↓
+    ▼
 Application
 ```
 
-The program demonstrates three situations:
-
-### Case 1 – No Application
-
-The bootloader checks the application and refuses to jump because valid firmware is not available.
-
-### Case 2 – Valid Application
-
-The application is programmed and its CRC is calculated.
-
-```text
-Flash
- ↓
-Write
- ↓
-CRC
- ↓
-Verify
- ↓
-Jump
-```
-
-### Case 3 – Corrupted Application
-
-One byte of the application is intentionally modified.
-
-```text
-Valid Firmware
-      ↓
-Corrupt Data
-      ↓
-CRC Mismatch
-      ↓
-Jump Rejected
-```
-
-This demonstrates why firmware verification is important.
+The simulation demonstrates three important cases.
 
 ---
 
-# ⚙️ 8. AT89C51 Bootloader Configuration
+## Case 1 – No Application
+
+The bootloader attempts to validate the application.
+
+```text
+No Valid Application
+        |
+        ▼
+CRC Validation Failed
+        |
+        ▼
+Stay in Bootloader
+```
+
+The bootloader does not execute invalid firmware.
+
+---
+
+## Case 2 – Valid Application
+
+A dummy application image is created and programmed.
+
+```text
+Erase
+  ↓
+Write
+  ↓
+Calculate CRC
+  ↓
+Store CRC
+  ↓
+Verify
+  ↓
+CRC OK
+  ↓
+Jump
+```
+
+---
+
+## Case 3 – Corrupted Application
+
+One byte of the firmware image is modified.
+
+```text
+Valid Firmware
+      |
+      ▼
+Data Corrupted
+      |
+      ▼
+CRC Mismatch
+      |
+      ▼
+Application Rejected
+```
+
+This demonstrates why firmware validation is important.
+
+---
+
+# ⚙️ AT89C51 Bootloader Configuration
 
 ### Program
 
-`bootloader_at89c51_config.c`
+```text
+bootloader_at89c51_config.c
+```
 
-This program demonstrates basic AT89C51 configuration required for the bootloader concept.
+This program demonstrates the basic AT89C51 configuration required for bootloader-related applications.
 
-### GPIO Configuration
+### GPIO
 
 ```c
 P1 = 0x00;
 ```
 
-### UART Configuration
+### UART
 
 ```c
 TMOD = 0x20;
@@ -388,76 +538,104 @@ SCON = 0x50;
 TR1 = 1;
 ```
 
-For a typical **11.0592 MHz crystal**, this configuration is commonly used for **9600 baud UART communication**.
+### Configuration
+
+| Parameter  | Value                |
+| ---------- | -------------------- |
+| MCU        | AT89C51              |
+| Crystal    | 11.0592 MHz          |
+| UART       | Serial communication |
+| Timer      | Timer 1              |
+| Timer Mode | Mode 2               |
+| Baud Rate  | 9600 bps             |
+| UART Mode  | Mode 1               |
 
 ---
 
-# 🔄 Complete Bootloader Flow
+# 🔒 Bootloader Safety
 
-```text
-                 RESET
-                   |
-                   ↓
-          +----------------+
-          |  Bootloader    |
-          +----------------+
-                   |
-                   ↓
-             UART Command
-                   |
-        +----------+----------+
-        |          |          |
-      ERASE      WRITE      VERIFY
-        |          |          |
-        +----------+----------+
-                   |
-                   ↓
-               CRC Check
-                   |
-             +-----+-----+
-             |           |
-           PASS         FAIL
-             |           |
-             ↓           ↓
-       Application    Stay in
-          Jump        Bootloader
-             |
-             ↓
-        Application
-```
+A reliable bootloader should protect the firmware update process.
 
----
+Important safety checks include:
 
-# 🛡️ Bootloader Safety Concepts
-
-A reliable bootloader should:
-
-* Protect the bootloader memory
-* Validate application address
-* Validate application size
-* Verify firmware integrity
+* Check application address
+* Check application size
+* Protect bootloader memory
+* Validate firmware before execution
+* Verify CRC
 * Reject corrupted firmware
-* Prevent jumping to invalid firmware
 * Handle UART communication errors
-* Provide a recovery mechanism
+* Provide recovery mechanism
 
-The basic safety rule is:
+Basic safety principle:
 
 ```text
              Firmware Valid?
                 /       \
               YES        NO
                |          |
-               ↓          ↓
+               ▼          ▼
              JUMP       REJECT
 ```
 
 ---
 
-# 📁 Project Structure
+# 🔄 Complete Day 18 Bootloader Flow
+
+```text
+                    RESET
+                      |
+                      ▼
+              +---------------+
+              |  Bootloader   |
+              +---------------+
+                      |
+                      ▼
+                 UART Command
+                      |
+        +-------------+-------------+
+        |             |             |
+      ERASE         WRITE         VERIFY
+        |             |             |
+        +-------------+-------------+
+                      |
+                      ▼
+                  CRC Check
+                      |
+                +-----+-----+
+                |           |
+              PASS         FAIL
+                |           |
+                ▼           ▼
+         Application      Stay in
+             Jump        Bootloader
+                |
+                ▼
+          Application
+```
+
+---
+
+# 💻 Practice Programs
+
+| #  | Program                        | Description                              |
+| -- | ------------------------------ | ---------------------------------------- |
+| 01 | `bootloader_flash_erase.c`     | Demonstrates Flash erase operation       |
+| 02 | `bootloader_flash_write.c`     | Demonstrates Flash write operation       |
+| 03 | `bootloader_crc_validate.c`    | Implements CRC-based firmware validation |
+| 04 | `bootloader_vector_relocate.c` | Demonstrates application jump concept    |
+| 05 | `bootloader_uart_protocol.c`   | Implements UART command processing       |
+| 06 | `bootloader_sim.c`             | Simulates complete bootloader flow       |
+| 07 | `bootloader_at89c51_config.c`  | Configures AT89C51 UART and GPIO         |
+
+---
+
+# 📂 Folder Structure
 
 ```text
 Day18_Bootloader/
+│
+├── README.md
 │
 ├── bootloader_flash_erase.c
 ├── bootloader_flash_write.c
@@ -465,8 +643,7 @@ Day18_Bootloader/
 ├── bootloader_vector_relocate.c
 ├── bootloader_uart_protocol.c
 ├── bootloader_sim.c
-├── bootloader_at89c51_config.c
-└── README.md
+└── bootloader_at89c51_config.c
 ```
 
 ---
@@ -484,40 +661,79 @@ Day18_Bootloader/
 
 ---
 
-# 🧠 Key Learning
+# 🎯 Applications of Bootloaders
 
-| Topic               | What I Learned                            |
-| ------------------- | ----------------------------------------- |
-| Bootloader          | Firmware that runs before the application |
-| Flash Erase         | Clearing application memory               |
-| Flash Write         | Programming firmware data                 |
-| CRC32               | Detecting firmware corruption             |
-| Application Jump    | Transferring control to application       |
-| Vector Table        | Understanding interrupt-vector concepts   |
-| UART                | Communication with the bootloader         |
-| Command Protocol    | Processing firmware commands              |
-| Firmware Validation | Checking firmware integrity               |
-| Safety              | Preventing invalid firmware execution     |
+Bootloaders are commonly used in:
+
+* 🚗 Automotive ECUs
+* 🤖 Robotics
+* 📡 IoT Devices
+* 🏭 Industrial Controllers
+* 🔋 Battery Management Systems
+* 🏥 Medical Devices
+* 🏠 Consumer Electronics
+* 📱 Embedded Communication Devices
+* ⚙️ Industrial Automation
 
 ---
 
-# 💡 Interview Questions
+# 🧠 Important Bootloader Terms
+
+| Term             | Meaning                                            |
+| ---------------- | -------------------------------------------------- |
+| Bootloader       | Firmware that runs before the application          |
+| Application      | Main user firmware                                 |
+| Flash            | Non-volatile memory used to store firmware         |
+| CRC              | Cyclic Redundancy Check                            |
+| UART             | Universal Asynchronous Receiver/Transmitter        |
+| IAP              | In-Application Programming                         |
+| ISP              | In-System Programming                              |
+| Firmware         | Software programmed into an embedded device        |
+| Application Jump | Transfer of control from bootloader to application |
+| Vector Table     | Table containing interrupt/reset handler addresses |
+| ACK              | Acknowledgment                                     |
+| NACK             | Negative Acknowledgment                            |
+
+---
+
+# 🧪 Practical Learning
+
+During Day 18, I practiced:
+
+* Understanding bootloader architecture
+* Understanding bootloader and application regions
+* Learning Flash erase concepts
+* Learning Flash write concepts
+* Implementing simulated Flash operations
+* Implementing CRC32 calculation
+* Validating firmware integrity
+* Detecting corrupted firmware
+* Understanding application jump concepts
+* Practicing function pointers
+* Implementing UART communication
+* Implementing UART bootloader commands
+* Understanding AT89C51 UART configuration
+* Simulating a complete bootloader workflow
+
+---
+
+# 🎤 Key Interview Questions
 
 1. What is a bootloader?
 2. Why is a bootloader required?
 3. What is the difference between a bootloader and an application?
-4. What is ISP?
-5. What is IAP?
-6. Why is CRC used in firmware updates?
-7. What happens if firmware CRC verification fails?
-8. Why should the bootloader region be protected?
-9. What is the purpose of UART in a bootloader?
-10. What is an application jump?
-11. What is a vector table?
-12. Does AT89C51 have an STM32-style VTOR register?
+4. What is the difference between ISP and IAP?
+5. Why is CRC used in a bootloader?
+6. What happens if CRC verification fails?
+7. Why should the bootloader region be protected?
+8. What is an application jump?
+9. What is a vector table?
+10. Does AT89C51 have an STM32-style VTOR register?
+11. Why is UART commonly used in bootloaders?
+12. What happens when Flash memory is erased?
 13. Why should firmware be verified before execution?
-14. What happens when Flash is erased?
-15. How can a bootloader prevent a corrupted firmware update?
+14. What is the purpose of ACK/NACK in a bootloader protocol?
+15. How can a bootloader recover from a failed firmware update?
 
 ---
 
@@ -525,18 +741,20 @@ Day18_Bootloader/
 
 The next improvements for this project are:
 
-1. Implement a complete UART firmware-transfer protocol.
-2. Add application size validation.
-3. Add bootloader memory protection.
-4. Add firmware version checking.
-5. Add CRC verification after programming.
-6. Add UART timeout handling.
-7. Add ACK/NACK response handling.
-8. Simulate firmware update from a PC.
-9. Port the bootloader concepts to STM32.
-10. Implement actual STM32 Flash erase/write operations.
-11. Implement proper vector-table relocation on STM32.
-12. Explore fail-safe firmware updates and rollback.
+1. Add a complete UART firmware-transfer protocol.
+2. Add firmware size validation.
+3. Add application address validation.
+4. Add bootloader memory protection.
+5. Add firmware version checking.
+6. Add ACK/NACK handling.
+7. Add UART timeout handling.
+8. Add retry mechanisms for failed transfers.
+9. Simulate firmware transfer from a PC.
+10. Implement a more complete bootloader command interface.
+11. Port the bootloader concepts to STM32.
+12. Implement actual STM32 Flash erase/write operations.
+13. Implement proper STM32 vector-table relocation.
+14. Explore fail-safe firmware updates and rollback mechanisms.
 
 ---
 
@@ -552,10 +770,45 @@ The next improvements for this project are:
 
 ---
 
-## ✅ Day 18 Completed
+# 🏆 Day 18 Milestone
 
-**Day 18 – Bootloader Basics → ✅ Completed**
+* 🚀 **Bootloader Fundamentals Completed**
+* 💾 **Flash Erase & Write Concepts Practiced**
+* 🔐 **CRC Firmware Validation Implemented**
+* 🔄 **Application Jump Concept Understood**
+* 📡 **UART Bootloader Protocol Practiced**
+* 🧪 **Complete Bootloader Flow Simulated**
+* ⚙️ **AT89C51 UART Configuration Practiced**
 
-Today I learned the fundamentals of **Bootloader Development** and practiced **Flash erase, Flash write, CRC validation, application jumping, UART command processing, and bootloader simulation** using C and AT89C51 concepts.
+---
 
-This practice provides a foundation for implementing a **real firmware bootloader on modern microcontrollers such as STM32**.
+# ✅ Day 18 Completed
+
+Today I learned the fundamentals of **Bootloader Development** and practiced the complete firmware-update concept:
+
+```text
+ERASE → WRITE → VERIFY → JUMP
+```
+
+I also learned how **CRC validation** helps detect corrupted firmware and how **UART communication** can be used to create a basic bootloader command protocol.
+
+This gives me a strong foundation for moving from **8051 bootloader concepts to real STM32 bootloader development**.
+
+---
+
+## 🚀 Learning Progress
+
+**Day 18 – Bootloader Basics Completed ✔️**
+
+### Next Topic
+
+**Day 19 – RTOS Basics 🧵**
+
+> *Consistency beats intensity. Keep learning, keep building, and keep improving.* 🚀
+
+---
+
+⭐ Part of my **Embedded Firmware Engineer Learning Journey** and **Embedded Firmware Roadmap**.
+
+```
+```
