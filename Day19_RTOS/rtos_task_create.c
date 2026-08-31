@@ -28,12 +28,12 @@ void Timer0_Init()
     TR0 = 1;                  
     EA  = 1;                  
 }
-void OS_CreateTask(TaskFunc f, uint16 periodTicks)
+void OS_CreateTask(TaskFunc f,uint16 periodTicks)
 {
-    if (taskCount < MAX_TASKS) {
-        taskList[taskCount].func         = f;
-        taskList[taskCount].delayTicks   = periodTicks;
-        taskList[taskCount].lastRunTick  = 0;
+    if (taskCount<MAX_TASKS) {
+        taskList[taskCount].func=f;
+        taskList[taskCount].delayTicks=periodTicks;
+        taskList[taskCount].lastRunTick=0;
         taskCount++;
     }
 }
@@ -41,9 +41,9 @@ void OS_Start()
 {
     uint8 i;
     for (;;) {
-        for (i = 0; i < taskCount; i++) {
-            if ((uint16)(tickCount - taskList[i].lastRunTick) >= taskList[i].delayTicks) {
-                taskList[i].lastRunTick = tickCount;
+        for (i=0;i<taskCount;i++) {
+            if ((uint16)(tickCount-taskList[i].lastRunTick)>=taskList[i].delayTicks) {
+                taskList[i].lastRunTick=tickCount;
                 taskList[i].func();      
             }
         }
@@ -51,16 +51,16 @@ void OS_Start()
 }
 void Task1_LedBlink()
 {
-    LED1 = !LED1;
+    LED1=!LED1;
 }
 void Task2_LedBlink()
 {
-    LED2 = !LED2;
+    LED2=!LED2;
 }
 void main()
 {
     Timer0_Init();
-    OS_CreateTask(Task1_LedBlink, 50);
-    OS_CreateTask(Task2_LedBlink, 20);
+    OS_CreateTask(Task1_LedBlink,50);
+    OS_CreateTask(Task2_LedBlink,20);
     OS_Start();   
 }
