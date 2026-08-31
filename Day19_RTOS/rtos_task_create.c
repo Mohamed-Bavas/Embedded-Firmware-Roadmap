@@ -49,15 +49,15 @@ void OS_Start()
         }
     }
 }
-void Task1_LedBlink(void)
+void Task1_LedBlink()
 {
     LED1 = !LED1;
 }
-void Task2_LedBlink(void)
+void Task2_LedBlink()
 {
     LED2 = !LED2;
 }
-void main(void)
+void main()
 {
     Timer0_Init();
     OS_CreateTask(Task1_LedBlink, 50);
