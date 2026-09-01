@@ -61,13 +61,13 @@ void main()
             lastProduceTick=tickCount;
             if(Queue_Send(&dataQueue,producedValue)) {
                 producedValue++;
-            }
-        }
+     }
+ }
         if((uint16)(tickCount-lastConsumeTick)>=35) {
             lastConsumeTick = tickCount;
             if(Queue_Receive(&dataQueue,&consumedValue)) {
                 P2=consumedValue;   
-            }
-        }
     }
+  }
+ }
 }
