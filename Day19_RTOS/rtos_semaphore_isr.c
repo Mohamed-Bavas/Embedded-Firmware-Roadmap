@@ -26,12 +26,12 @@ void ButtonTask()
         LED=1;
         Delay_ms(200);
         LED=0;
-    }
+}
 }
 void main()
 {
     EXT0_Init();
     for (;;) {
         ButtonTask();
-    }
+ }
 }
