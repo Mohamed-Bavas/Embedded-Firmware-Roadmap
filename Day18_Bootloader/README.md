@@ -1,4 +1,3 @@
-
 # 🚀 Day 18 – Bootloader Basics
 
 Welcome to **Day 18** of my **Embedded Firmware Engineer Learning Journey**.
