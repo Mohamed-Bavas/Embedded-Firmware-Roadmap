@@ -2,7 +2,7 @@
 
 Welcome to my **Embedded Firmware Engineer Learning Journey**.
 
-This repository documents my daily progress as I learn **Embedded C**, **Microcontrollers**, **Communication Protocols**, and **Firmware Development**. My goal is to build strong programming skills, create practical projects, and prepare for Embedded Firmware Engineer interviews.
+This repository documents my daily progress as I learn **Embedded C**, **Microcontrollers**, **Communication Protocols**, **RTOS**, and **Firmware Development**. My goal is to build strong programming skills, create practical projects, and prepare for Embedded Firmware Engineer interviews.
 
 ---
 
@@ -12,6 +12,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 * Master memory management, bit manipulation, register-level programming, and GPIO programming.
 * Understand 8051 and STM32 microcontroller architecture and peripherals.
 * Learn embedded communication protocols (UART, SPI, I2C, CAN).
+* Understand RTOS concepts and real-time embedded software development.
 * Develop practical embedded firmware projects using Embedded C.
 * Strengthen problem-solving and embedded interview skills.
 * Maintain a consistent learning portfolio on GitHub.
@@ -24,6 +25,7 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 * Embedded C
 * 8051 Microcontroller
 * STM32 Microcontroller
+* RTOS Concepts
 * VS Code
 * STM32CubeIDE
 * Keil μVision
@@ -36,26 +38,26 @@ This repository documents my daily progress as I learn **Embedded C**, **Microco
 
 | Day    | Topic                               | Status |
 | ------ | ----------------------------------- | :----: |
-| Day 01 | C Programming Basics                |   ✅   |
-| Day 02 | Pointers, Arrays & Strings          |   ✅   |
-| Day 03 | Functions, Storage Classes & Memory |   ✅   |
-| Day 04 | Structures, Unions & Enums          |   ✅   |
-| Day 05 | File Handling & Preprocessor        |   ✅   |
-| Day 06 | Bitwise Operators & Embedded C      |   ✅   |
-| Day 07 | 8051 Microcontroller Basics         |   ✅   |
-| Day 08 | GPIO Programming                    |   ✅   |
-| Day 09 | Timers                              |   ✅   |
-| Day 10 | Interrupts                          |   ✅   |
-| Day 11 | UART                                |   ✅   |
-| Day 12 | SPI                                 |   ✅   |
-| Day 13 | I2C                                 |   ✅   |
-| Day 14 | ADC & DAC                           |   ✅   |
-| Day 15 | PWM                                 |   ✅   |
-| Day 16 | CAN Protocol                        |   ✅   |
-| Day 17 | Watchdog Timer                      |   ✅   |
-| Day 18 | Bootloader Basics                   |   ✅   |
-| Day 19 | RTOS Basics                         |   ⏳   |
-| Day 20 | Mini Embedded Project               |   ⏳   |
+| Day 01 | C Programming Basics                |    ✅   |
+| Day 02 | Pointers, Arrays & Strings          |    ✅   |
+| Day 03 | Functions, Storage Classes & Memory |    ✅   |
+| Day 04 | Structures, Unions & Enums          |    ✅   |
+| Day 05 | File Handling & Preprocessor        |    ✅   |
+| Day 06 | Bitwise Operators & Embedded C      |    ✅   |
+| Day 07 | 8051 Microcontroller Basics         |    ✅   |
+| Day 08 | GPIO Programming                    |    ✅   |
+| Day 09 | Timers                              |    ✅   |
+| Day 10 | Interrupts                          |    ✅   |
+| Day 11 | UART                                |    ✅   |
+| Day 12 | SPI                                 |    ✅   |
+| Day 13 | I2C                                 |    ✅   |
+| Day 14 | ADC & DAC                           |    ✅   |
+| Day 15 | PWM                                 |    ✅   |
+| Day 16 | CAN Protocol                        |    ✅   |
+| Day 17 | Watchdog Timer                      |    ✅   |
+| Day 18 | Bootloader Basics                   |    ✅   |
+| Day 19 | RTOS Basics                         |    ✅   |
+| Day 20 | Mini Embedded Project               |    ⏳   |
 
 ---
 
@@ -91,7 +93,7 @@ Embedded-Firmware-Roadmap/
 ├── Mini_Projects/
 ├── Notes/
 └── Resources/
-````
+```
 
 ---
 
@@ -103,6 +105,7 @@ Embedded-Firmware-Roadmap/
 * STM32 Reference Manuals
 * STM32 HAL Documentation
 * ARM Cortex-M Documentation
+* RTOS Documentation and Tutorials
 
 ---
 
@@ -114,6 +117,7 @@ Embedded-Firmware-Roadmap/
 * ✅ STM32 Projects
 * ✅ Communication Protocol Examples
 * ✅ Bootloader Practice Programs
+* ✅ RTOS Concepts and Examples
 * ✅ Interview-Oriented Programs
 * ✅ Detailed Notes and Explanations
 * ✅ Practical Mini Projects
@@ -140,24 +144,24 @@ Embedded-Firmware-Roadmap/
 * ✔️ Completed Day 16 – CAN Protocol.
 * ✔️ Completed Day 17 – Watchdog Timer.
 * ✔️ Completed Day 18 – Bootloader Basics.
-* 🔄 Next: **Day 19 – RTOS Basics**
+* ✔️ Completed Day 19 – RTOS Basics.
+* 🔄 Next: **Day 20 – Mini Embedded Project**
 
 ---
 
 # 🏆 Progress Tracker
 
-**Completed:** **18 / 20 Days (90%)**
+**Completed:** **19 / 20 Days (95%)**
 
 ```text
-████████████████████████████████████░░ 90%
+██████████████████████████████████████░░ 95%
 ```
 
 ---
 
-# 🚀 Upcoming Topics
+# 🚀 Upcoming Topic
 
-* ⚡ RTOS Basics
-* 🛠️ Mini Embedded Project
+* 🛠️ **Day 20 – Mini Embedded Project**
 
 ---
 
@@ -190,7 +194,7 @@ One project at a time.
 
 # 🎯 Current Milestone
 
-* ✅ **18 Days Completed**
+* ✅ **19 Days Completed**
 * 📚 **140+ C & Embedded C Programs**
 * 💻 **8051 Programming Completed**
 * 🔌 **GPIO Programming Completed**
@@ -204,7 +208,8 @@ One project at a time.
 * 🚌 **CAN Protocol Completed**
 * 🛡️ **Watchdog Timer Completed**
 * 🚀 **Bootloader Basics Completed**
-* ⚡ **Preparing for RTOS Basics**
+* ⚡ **RTOS Basics Completed**
+* 🛠️ **Preparing for Mini Embedded Project**
 
 ---
 
@@ -216,24 +221,25 @@ One project at a time.
 * 🔬 8051 practical firmware examples
 * 🛠️ Proteus simulation projects
 * 🚀 Bootloader practice and simulation
+* ⚡ RTOS fundamentals
 * 🎯 Interview-oriented coding questions
 * 🛠️ Mini projects for hands-on practice
 * 📈 Daily progress tracking
 
 ---
 
-# 🏁 90% Milestone Reached!
+# 🏁 95% Milestone Reached!
 
-I have successfully completed **18 out of 20 days** of my Embedded Firmware Engineer Learning Journey.
+I have successfully completed **19 out of 20 days** of my Embedded Firmware Engineer Learning Journey.
 
 ```text
-Day 01 ──────────────────────────────── Day 18
+Day 01 ───────────────────────────────── Day 19
   ✅                                      ✅
 
-████████████████████████████████████░░ 90%
+██████████████████████████████████████░░ 95%
 ```
 
-Only **2 days remaining** to complete the roadmap! 🚀
+Only **1 day remaining** to complete the roadmap! 🚀
 
 ---
 
